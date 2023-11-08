@@ -1,3 +1,5 @@
+package primitiv;
+
 public class Hello {
     // класс - это программа которую мы хотим
     // чтобы java-машина выполнила

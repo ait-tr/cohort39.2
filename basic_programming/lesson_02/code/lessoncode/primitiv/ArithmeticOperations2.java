@@ -1,3 +1,5 @@
+package primitiv;
+
 public class ArithmeticOperations2 {
     public static void main(String[] args) {
 
