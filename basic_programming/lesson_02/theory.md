@@ -1,5 +1,3 @@
-# Lesson 01
+# Lesson 02
 
-## 01. Базовые понятия и определения
-
-```Next lesson
+Презентации в lesson_02.presentation
