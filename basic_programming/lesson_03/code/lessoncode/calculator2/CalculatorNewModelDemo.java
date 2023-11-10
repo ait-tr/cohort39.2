@@ -12,7 +12,6 @@ public class CalculatorNewModelDemo {
 
         System.out.println("Сумма значений = " + result);
 
-
         result = calc.sub(10,8);
 
         System.out.println("Результат вычитания  = " + result);
@@ -20,7 +19,6 @@ public class CalculatorNewModelDemo {
         result = calc.multipl(10,8);
 
         System.out.println("Результат умножения  = " + result);
-
 
         double resultDiv = calc.div(10,4);
 
