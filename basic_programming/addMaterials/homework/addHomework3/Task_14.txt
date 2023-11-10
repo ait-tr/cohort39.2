@@ -1,4 +1,4 @@
-Добавьте в класс Calculator метод для определения
+Добавьте в класс calculator1.Calculator метод для определения
 максимального из двух целых чисел.
 
 Добавьте в класс CalculatorTest тесты для этого метода.
@@ -11,7 +11,7 @@
 
 Подсказка:
 
-class Calculator {
+class calculator1.Calculator {
 
     public int maxOfTwoNumbers(int firstNumber, int secondNumber) {
         // реализуйте этот метод

@@ -53,7 +53,7 @@
 при помощи автоматических тестов!
 
 Создайте класс CalculatorTest и напишите автоматические тесты для
-всех методов класса Calculator из предыдущего задания.
+всех методов класса calculator1.Calculator из предыдущего задания.
 
 Подсказка:
 
@@ -69,7 +69,7 @@ class CalculatorTest {
         int firstNumber = 10;  // подготавливаем тестовые данные
         int secondNumber = 5;  // подготавливаем тестовые данные
         int expectedResult = 15;  // подготавливаем тестовые данные
-        Calculator calculator = new Calculator();
+        calculator1.Calculator calculator = new calculator1.Calculator();
         int realResult = calculator.sum(firstNumber, secondNumber);  // вызываем продакшен код, который хотим протестировать
         if (realResult == expectedResult) {  // проверяем правильно ли сработал тестируемый код
             System.out.println("Sum test = OK");
