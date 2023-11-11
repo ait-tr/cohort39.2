@@ -5,11 +5,9 @@ public class Cat {
     int age;
     String breed;
 
-
     public Cat(String name) {
         this.name = name;
     }
-
 
     public Cat(String name, int age) {
         this.name = name;
