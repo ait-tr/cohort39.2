@@ -11,5 +11,10 @@ public class RobotDemo {
         robot1.hello();
         robot2.hello();
 
+        double euroValue = robot1.currencyConverter(100, 0.97);
+
+        System.out.println("Из 100 долларов мы получим " + euroValue + " евро");
+
+
     }
 }

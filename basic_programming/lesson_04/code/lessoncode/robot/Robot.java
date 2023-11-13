@@ -13,4 +13,9 @@ public class Robot {
         System.out.println("I am robot " + mark);
     }
 
+    public double currencyConverter(double usdValue, double exchangeRateUSdToEuro){
+        double euroValue = usdValue * exchangeRateUSdToEuro;
+        return euroValue;
+    }
+
 }
