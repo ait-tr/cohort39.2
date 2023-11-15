@@ -7,8 +7,8 @@ public class Cat {
 
     public void meow(){
         System.out.println("Meow!");
-        System.out.println("Cat name: " + name);
-        System.out.println("Cat breed: " + breed);
+        System.out.println("methods.Cat name: " + name);
+        System.out.println("methods.Cat breed: " + breed);
     }
 
     public void happyBirthDay(){

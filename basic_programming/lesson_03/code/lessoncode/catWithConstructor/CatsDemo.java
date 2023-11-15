@@ -2,7 +2,7 @@ package catWithConstructor;
 
 public class CatsDemo {
     public static void main(String[] args) {
-        //Cat myCat = new Cat();
+        //methods.Cat myCat = new methods.Cat();
 
         Cat myCat2 = new Cat("Barsik");
         System.out.println(myCat2.name);
