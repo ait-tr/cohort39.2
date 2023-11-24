@@ -5,5 +5,19 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "./code/lessoncode/arrayExamples/ArrayExample1.java",
+    "./code/lessoncode/arrayExamples/ArrayExample2.java",
+    "./code/lessoncode/arrayExamples/ArrayExample3.java",
+    "./code/lessoncode/arrayExamples/ArrayExample4.java",
+    "./code/lessoncode/arrayExamples/ArrayExample5.java",
+    "./code/lessoncode/arrayExamples/ArrayExample6.java",
+    "./code/lessoncode/arrayExamples/ArrayExample7.java",
+    "./code/lessoncode/tasks/ArrayOperations.java",
+    "./code/lessoncode/tasks/ArrayResult.java",
+    "./code/lessoncode/tasks/Task1.java",
+    "./code/lessoncode/ArrayTask.txt",
+    "./code/lessoncode/Car.java",
+    "./code/lessoncode/CarDemo.java",
+    "./code/lessoncode/CarDemo2.java"
   ]
 }

@@ -5,5 +5,15 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "./code/lessoncode/newPackage/secondLevelPackage/SecondLevelPackageClass.java",
+    "./code/lessoncode/newPackage/NewPackageClass.java",
+    "./code/lessoncode/primitiv/ArithmeticOperations.java",
+    "./code/lessoncode/primitiv/ArithmeticOperations2.java",
+    "./code/lessoncode/primitiv/BinarSystem.txt",
+    "./code/lessoncode/primitiv/Hello.java",
+    "./code/lessoncode/primitiv/NewPackageClass.java",
+    "./code/lessoncode/primitiv/TypeCast.java",
+    "./code/lessoncode/referenceType/Dog.java",
+    "./code/lessoncode/referenceType/DogDemo.java"
   ]
 }
