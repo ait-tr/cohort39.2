@@ -5,5 +5,13 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "./code/lessoncode/calculator1/CalculatorDemo.java",
+    "./code/lessoncode/calculator2/CalculatorNewModelDemo.java",
+    "./code/lessoncode/calculator1/Calculator.java",
+    "./code/lessoncode/catWithConstructor/Cat.java",
+    "./code/lessoncode/calculator2/CalculatorNewModel.java",
+    "./code/lessoncode/catWithConstructor/CatsDemo.java",
+    "./code/lessoncode/catWithoutConstructor/Cat.java",
+    "./code/lessoncode/catWithoutConstructor/CatsDemo.java"
   ]
 }

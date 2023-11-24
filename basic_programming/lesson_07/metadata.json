@@ -5,5 +5,19 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "./code/lessoncode/conditions/ConditionOperationExample.java",
+    "./code/lessoncode/conditions/ThreeNumbersCompare.java",
+    "./code/lessoncode/conditions/UserInput.java",
+    "./code/lessoncode/loopFor/Example1.java",
+    "./code/lessoncode/loopFor/Example3.java",
+    "./code/lessoncode/loopFor/Example2.java",
+    "./code/lessoncode/loopFor/ExampleTable.java",
+    "./code/lessoncode/loopWhile/Cat.java",
+    "./code/lessoncode/loopWhile/Example1.java",
+    "./code/lessoncode/loopWhile/Example2.java",
+    "./code/lessoncode/loopWhile/Example3.java",
+    "./code/lessoncode/CheckNumber.java",
+    "./code/lessoncode/SumNumbers.java",
+    "./code/lessoncode/Task.txt"
   ]
 }

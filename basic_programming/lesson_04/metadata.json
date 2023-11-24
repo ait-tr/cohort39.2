@@ -5,5 +5,17 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "./code/lessoncode/car/Car.java",
+    "./code/lessoncode/car/CarDemo.java",
+    "./code/lessoncode/car/CarTask.txt",
+    "./code/lessoncode/library/Book.java",
+    "./code/lessoncode/library/BookDemo.java",
+    "./code/lessoncode/library/BookUtil.java",
+    "./code/lessoncode/library/LibraryTask.txt",
+    "./code/lessoncode/robot/Robot.java",
+    "./code/lessoncode/robot/RobotDemo.java",
+    "./code/lessoncode/robot/Task.txt",
+    "./code/lessoncode/PhoneShop.java",
+    "./code/lessoncode/Phone.java"
   ]
 }

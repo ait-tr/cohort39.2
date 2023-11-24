@@ -5,5 +5,21 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "./code/lessoncode/methods/Cat.java",
+    "./code/lessoncode/methods/CatDemo.java",
+    "./code/lessoncode/methods/Dog.java",
+    "./code/lessoncode/methods/DogDemo.java",
+    "./code/lessoncode/publicAndPrivate/car/entity/Car.java",
+    "./code/lessoncode/publicAndPrivate/car/CarDemo.java",
+    "./code/lessoncode/publicAndPrivate/moto/Moto.java",
+    "./code/lessoncode/publicAndPrivate/moto/MotoDemo.java",
+    "./code/lessoncode/random/RandomExample.java",
+    "./code/lessoncode/random/RandomExample2.java",
+    "./code/lessoncode/scanner/ScannerExample.java",
+    "./code/lessoncode/string/WorkWithString.java",
+    "./code/lessoncode/string/CompareStringExample.java",
+    "./code/lessoncode/string/WorkWithString1.java",
+    "./code/lessoncode/string/WorkWithString3.java",
+    "./code/lessoncode/string/WorkWithString2.java"
   ]
 }

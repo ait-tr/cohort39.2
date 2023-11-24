@@ -5,5 +5,18 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "./code/lessoncode/conditionOperator/ConditionOperator4.java",
+    "./code/lessoncode/conditionOperator/ConditionOperators1.java",
+    "./code/lessoncode/conditionOperator/ConditionOperators2.java",
+    "./code/lessoncode/conditionOperator/ConditionOperators3.java",
+    "./code/lessoncode/practice/NumbersUtil.java",
+    "./code/lessoncode/practice/Task1.java",
+    "./code/lessoncode/practice/Tasks.txt",
+    "./code/lessoncode/practice/Task2.java",
+    "./code/lessoncode/practice/UserInput.java",
+    "./code/lessoncode/testing/TempConverter.java",
+    "./code/lessoncode/testing/TempDemo.java",
+    "./code/lessoncode/testing/TempTest.java",
+    "./code/lessoncode/BooleanExample.java"
   ]
 }
