@@ -5,5 +5,14 @@
   "theory": "theory.md",
   "homework": "homework.md",
   "code": [
+    "./code/lessoncode/carTruck/Engine.java",
+    "./code/lessoncode/carTruck/Truck.java",
+    "./code/lessoncode/carTruck/TruckDemo.java",
+    "./code/lessoncode/carTruck/Truck-pic.jpg",
+    "./code/lessoncode/dog/Dog.java",
+    "./code/lessoncode/dog/DogExample.java",
+    "./code/lessoncode/school/Student.java",
+    "./code/lessoncode/school/SchoolApp.java",
+    "./code/lessoncode/school/SchoolApp2.java"
   ]
 }
