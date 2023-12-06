@@ -5,6 +5,7 @@ import setStore.entity.SetToolsRepository;
 import setStore.entity.Tool;
 import setStore.entity.ToolRepository;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 
 public class SetToolsShop {
@@ -33,7 +34,7 @@ public class SetToolsShop {
 
         SetTool setTool1 = new SetTool(repository.getTools()[0],repository.getTools()[1]);
         SetTool setTool2 = new SetTool(repository.getTools()[2],repository.getTools()[3]);
-        SetTool setTool3 = new SetTool(repository.getTools()[4],repository.getTools()[4]);
+        SetTool setTool3 = new SetTool(repository.getTools()[4],repository.getTools()[5]);
 
 
         SetToolsRepository setToolsRepository = new SetToolsRepository(setTool1, setTool2, setTool3);
@@ -56,8 +57,24 @@ public class SetToolsShop {
 //   ----------- нарисовать схему, которая отражает все экземпляры классов и массивов, которые были созданы в результате работы приложения до этой строчки. -----
 
 
-        for (int i = 0; i < setToolsRepository.getSetTools().length; i++) {
-            System.out.println(setToolsRepository.getSetTools()[i]);
+        for (int i = 0; i < setToolsRepository.getSetToolsRepo().length; i++) {
+            System.out.println("Набор № " + i + ": ");
+
+            SetTool set = setToolsRepository.getSetToolsRepo()[i];
+
+            Tool toolFromSet1 = set.getSetTools()[0];
+            Tool toolFromSet2 = set.getSetTools()[1];
+
+            System.out.println("Первый элемент нашего набора: " );
+            System.out.println("id: " + toolFromSet1.getId());
+            System.out.println("tool name: " + toolFromSet1.getToolName());
+            System.out.println("description name: " + toolFromSet1.getToolDescription());
+
+            System.out.println("Второй элемент нашего набора: " );
+            System.out.println("id: " + toolFromSet2.getId());
+            System.out.println("tool name: " + toolFromSet2.getToolName());
+            System.out.println("description name: " + toolFromSet2.getToolDescription());
+            System.out.println();
         }
 
 

@@ -12,18 +12,18 @@ public class SetToolsRepository {
         setToolsRepo[2] = setTools3;
     }
 
-    public SetTool[] getSetTools() {
+    public SetTool[] getSetToolsRepo() {
         return setToolsRepo;
     }
 
-    public void setSetTools(SetTool[] setTools) {
-        this.setToolsRepo = setTools;
+    public void setSetToolsRepo(SetTool[] setToolsRepo) {
+        this.setToolsRepo = setToolsRepo;
     }
 
     @Override
     public String toString() {
         return "SetToolsRepository{" +
-                "setTools=" + Arrays.toString(setToolsRepo) +
+                "setToolsRepo=" + Arrays.toString(setToolsRepo) +
                 '}';
     }
 }
