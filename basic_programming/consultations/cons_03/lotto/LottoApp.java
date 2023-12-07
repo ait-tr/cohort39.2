@@ -12,6 +12,6 @@ public class LottoApp {
 
         LottoGame game = new LottoGame();
 
-
+        game.startGame();
     }
 }

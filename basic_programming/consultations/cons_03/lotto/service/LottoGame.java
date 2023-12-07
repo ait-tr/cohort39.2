@@ -47,7 +47,9 @@ public class LottoGame {
            }
        }
 
-       public void game(){
+       public void startGame(){
+
+
         int playersNumber = ui.uiInt("Введите количество игроков:");
         players = new Player[playersNumber];
            for (int i = 0; i < playersNumber; i++) {
@@ -57,7 +59,44 @@ public class LottoGame {
                Cart cart3 = cartRepository.getCarts()[i * 3 + 2];;
 
                players[i] = new Player(playerNickName,cart1, cart2,cart3);
+
+               System.out.println(players[i]);
            }
+
+           boolean noWinner = true;
+           int drumCounter = 0;
+
+           while (noWinner) {
+               /*
+               1) вытащить очередное число из барабана;
+               2) у каждого игрока проверить все его карточки и если это число присутствует, то это отметить;
+               3) проверить выиграли ли карточка и если да, то вернуть имя информацию об одном из победителей;
+               4) проверив всех игроков и если есть победители, то вывести их.
+                */
+
+               int currentNumber = drum[drumCounter];
+
+               System.out.print(currentNumber + ", ");
+
+               for (int i = 0; i < players.length; i++) {
+
+                   if (players[i].checkPlayersCarts(currentNumber)) {
+                       System.out.println("\n  На " + drumCounter + " ходу, ");
+                       System.out.println("\n Игрок " + players[i].getNickname() + " выиграл!!! НАШИ ПОЗДРАВЛЕНИЯ");
+                       System.out.println("Выиграла карточка: ");
+                       for (int j = 0; j < players[i].getCarts().length; j++) {
+                           if (players[i].getCartsMatchesCount()[j] == players[i].getCarts()[j].getCartArray().length) {
+                               System.out.println("Выиграла карточка: " + Arrays.toString(players[i].getCarts()[j].getCartArray()));
+                           }
+                       }
+
+                       noWinner = false;
+                   }
+               }
+
+               drumCounter++;
+           }
+
        }
 
 }
