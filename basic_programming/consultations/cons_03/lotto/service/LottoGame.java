@@ -1,9 +1,9 @@
 package lotto.service;
 
-import entity.Cart;
+import lotto.entity.Cart;
 import lotto.entity.Player;
-import repository.CartRepository;
-import service.CartServices;
+import lotto.repository.CartRepository;
+import lotto.service.CartServices;
 
 import java.util.Arrays;
 
@@ -12,7 +12,7 @@ public class LottoGame {
     private int[] drum;
     private Player[] players;
 
-    service.CartServices cartServices = new CartServices();
+    CartServices cartServices = new CartServices();
     CartRepository cartRepository = new CartRepository(15);
 
     UserInput ui = new UserInput();
@@ -56,7 +56,7 @@ public class LottoGame {
                Cart cart2 = cartRepository.getCarts()[i * 3 + 1];;
                Cart cart3 = cartRepository.getCarts()[i * 3 + 2];;
 
-               players[i] = new Player(playerNickName,)
+               players[i] = new Player(playerNickName,cart1, cart2,cart3);
            }
        }
 

@@ -1,6 +1,6 @@
 package lotto.service;
 
-import entity.Cart;
+import lotto.entity.Cart;
 
 import java.util.Arrays;
 import java.util.Random;

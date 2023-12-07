@@ -1,6 +1,6 @@
 package lotto.repository;
 
-import entity.Cart;
+import lotto.entity.Cart;
 
 public class CartRepository {
 
