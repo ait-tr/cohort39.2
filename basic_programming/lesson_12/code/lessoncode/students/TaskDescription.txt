@@ -1,6 +1,6 @@
 Создать mini приложение для учета студентов в институте
 
- Person -> Student
+ oop.incapsulation.twoLevel.Person -> Student
     ^
     |
   Address

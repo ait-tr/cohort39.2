@@ -21,7 +21,7 @@ public class InputData {
 
     public void inputComputerData(Computer[] computers){
         for (int i = 0; i < computers.length; i++) {
-            System.out.println("Computer #" + (i+1));
+            System.out.println("oop.incapsulation.Computer #" + (i+1));
             int id = ui.userInterfaceInputInt("Please enter computer's 'id':");
             String model = ui.userInterfaceInputText("Please enter computer's 'model':");
             String processor = ui.userInterfaceInputText("Please enter computer's 'processor':");

@@ -27,7 +27,7 @@ public class Computer {
 
     @Override
     public String toString() {
-        return "Computer{" +
+        return "oop.incapsulation.Computer{" +
                 "id=" + id +
                 ", model='" + model + '\'' +
                 ", processor='" + processor + '\'' +
