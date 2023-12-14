@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class Books {
     private Book[] books;
 
-
     public Books(Integer totalNumberOfBooks) {
         this.books = new Book[totalNumberOfBooks];
     }
