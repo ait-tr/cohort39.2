@@ -20,8 +20,10 @@ public class BookCaseService {
 
         if (freePlace >= 0) {
             booksOnTheShelf[freePlace] = book;
+            return true;
         } else {
             System.out.println("На полке нет свободного места для книги");
+            return false;
         }
     }
 
