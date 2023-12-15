@@ -1,4 +1,4 @@
-package oop.inheritance;
+package oop.inheritance.animals;
 
 public class Animal {
 
@@ -12,7 +12,5 @@ public class Animal {
         return name;
     }
 
-    public void voice() {
-        System.out.println("Meow!!!");
-    }
+    public void voice() {}
 }

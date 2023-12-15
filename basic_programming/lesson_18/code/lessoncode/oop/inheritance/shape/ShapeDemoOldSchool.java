@@ -1,4 +1,4 @@
-package oop.abstraction;
+package oop.inheritance.shape;
 
 public class ShapeDemoOldSchool {
     public static void main(String[] args) {

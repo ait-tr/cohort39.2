@@ -1,4 +1,4 @@
-package oop.abstraction;
+package oop.inheritance.shape;
 
 public class Rectangle extends Shape{
     private double sideA;

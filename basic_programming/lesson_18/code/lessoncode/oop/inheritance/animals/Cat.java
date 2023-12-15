@@ -1,4 +1,4 @@
-package oop.inheritance;
+package oop.inheritance.animals;
 
 public class Cat extends Animal{
 
@@ -7,6 +7,10 @@ public class Cat extends Animal{
         super(name);
     }
 
+    @Override
+    public void voice() {
+        System.out.println("Meow!!!");
+    }
     public void greeting(){
         System.out.println("Cat name " + getName());
     }

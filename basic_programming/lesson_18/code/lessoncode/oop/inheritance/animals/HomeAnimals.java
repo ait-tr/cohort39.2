@@ -1,6 +1,4 @@
-package oop.inheritance;
-
-import java.util.Arrays;
+package oop.inheritance.animals;
 
 public class HomeAnimals {
     public static void main(String[] args) {

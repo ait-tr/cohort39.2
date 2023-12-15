@@ -1,6 +1,6 @@
-package oop.inheritance;
+package oop.abstraction.abstractAnimal;
 
-public class Dog extends Animal{
+public class Dog extends Animal {
 
     private String breed;
 
