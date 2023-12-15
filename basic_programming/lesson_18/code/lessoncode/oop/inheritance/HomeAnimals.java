@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class HomeAnimals {
     public static void main(String[] args) {
-        Dog dog1 = new Dog("Barbos");
-        Dog dog2 = new Dog("Palkan");
+        Dog dog1 = new Dog("Barbos","kolly");
+        Dog dog2 = new Dog("Palkan", "mastif");
 
 
         Cat cat1 = new Cat("Murzik");
