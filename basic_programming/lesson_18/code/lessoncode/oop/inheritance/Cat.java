@@ -1,22 +1,14 @@
 package oop.inheritance;
 
-public class Cat {
+public class Cat extends Animal{
 
-    private String name;
 
     public Cat(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void voice() {
-        System.out.println("Meow!!!");
+        super(name);
     }
 
     public void greeting(){
-        System.out.println("Cat name " + name);
+        System.out.println("Cat name " + getName());
     }
+
 }
