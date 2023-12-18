@@ -11,6 +11,7 @@ public class Cat extends Animal {
     public void voice() {
         System.out.println("Meow!!!");
     }
+
     public void greeting(){
         System.out.println("Cat name " + getName());
     }
