@@ -12,6 +12,6 @@ public class UserService {
     }
 
     public void createDatabase(){
-    repository.add(new UserEntity(1,"Ruslan", "Bogomolov","123456789"));
+        repository.add(new UserEntity(1,"Ruslan", "Bogomolov","123456789"));
     }
 }
