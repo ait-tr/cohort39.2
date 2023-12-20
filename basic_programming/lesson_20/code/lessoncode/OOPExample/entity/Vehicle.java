@@ -1,4 +1,4 @@
-package OOPExample;
+package OOPExample.entity;
 
 abstract class Vehicle {
     private String model;
@@ -21,7 +21,7 @@ abstract class Vehicle {
         return speed;
     }
 
-    public void setSpeed(Integer speed) {
+    void setSpeed(Integer speed) {
         this.speed = speed;
     }
 }

@@ -1,6 +1,9 @@
-package OOPExample;
+package OOPExample.entity;
 
-public class BiCycle extends NonMotorizedVehicle implements GearShiftOperation{
+import OOPExample.interfaces.GearShift;
+import OOPExample.interfaces.GearShiftOperation;
+
+public class BiCycle extends NonMotorizedVehicle implements GearShiftOperation {
 
     private GearShift gearShift;
 

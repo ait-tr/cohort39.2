@@ -1,4 +1,4 @@
-package OOPExample;
+package OOPExample.entity;
 
 public class Engine {
     private String engineParameters;

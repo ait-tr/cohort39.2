@@ -1,4 +1,4 @@
-package OOPExample;
+package OOPExample.interfaces;
 
 public class GearShift {
 

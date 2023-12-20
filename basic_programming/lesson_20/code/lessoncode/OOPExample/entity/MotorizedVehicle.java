@@ -1,6 +1,10 @@
-package OOPExample;
+package OOPExample.entity;
 
-public class MotorizedVehicle extends Vehicle implements EngineOperation, GearShiftOperation{
+import OOPExample.interfaces.EngineOperation;
+import OOPExample.interfaces.GearShift;
+import OOPExample.interfaces.GearShiftOperation;
+
+public class MotorizedVehicle extends Vehicle implements EngineOperation, GearShiftOperation {
     private Engine engine;
     private GearShift gearShift;
 
@@ -12,19 +16,19 @@ public class MotorizedVehicle extends Vehicle implements EngineOperation, GearSh
 
 
     @Override
-    void accelerate() {
+    public void accelerate() {
         setSpeed(getSpeed() + 10);
         System.out.println("Accelerate. Current speed: " + getSpeed());
     }
 
     @Override
-    void brake() {
+    public void brake() {
         if (getSpeed() > 10) {
         setSpeed(getSpeed() - 10);
         System.out.println("Brake. Current speed: " + getSpeed());}
         else {
             setSpeed(0);
-            System.out.println("Car stopped.");}
+            System.out.println(getModel() + " stopped.");}
         }
 
     @Override
