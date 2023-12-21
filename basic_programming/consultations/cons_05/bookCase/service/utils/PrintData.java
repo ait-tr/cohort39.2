@@ -18,6 +18,7 @@ public class PrintData {
     }
 
     public void printBC(Bookcase bc){
+        System.out.println("-------------");
         System.out.println("Книжный шкаф:");
         for (int i = 0; i < bc.getBookShelves().length; i++) {
             System.out.println("Книжная полка № " + (i + 1));
