@@ -21,6 +21,7 @@ public class BookCaseService {
 
         for (int i = 0; i < numberOfShelves; i++) {
             for (int j = 0; j < numberBooksOnShelf; j++) {
+
                 bookcase.getBookShelves()[i].getBooksOnShelf()[j] = booksCollections.getBooksCollections()[counter];
                 counter++;
             }

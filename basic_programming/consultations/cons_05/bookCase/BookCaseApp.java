@@ -17,14 +17,14 @@ public class BookCaseApp {
 
         BookCaseService bookCaseService = new BookCaseService();
 
-        Bookcase bc = bookCaseService.createBookCase(3,4);
+        Bookcase bookcase = bookCaseService.createBookCase(3,4);
 
         // создан книжный шкаф в котором 3 полки на 4 книги на каждой полке, но они пустые
         // будем заполнять наши полки
 
+        bookCaseService.fillBookCase(bookcase,booksCollections);
 
-
-        printData.printBC(bc);
+        printData.printBC(bookcase);
 
     }
 }
