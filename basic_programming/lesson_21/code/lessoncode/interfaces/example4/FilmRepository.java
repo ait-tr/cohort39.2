@@ -1,16 +1,22 @@
-package interfaces.example3;
+package interfaces.example4;
 
-public class FilmCatalogService {
+import interfaces.example3.FilmCatalog;
 
-    FilmCatalog catalog;
+public class FilmRepository {
 
     Film[] filmList;
 
-    public FilmCatalogService(FilmCatalog catalog) {
-        this.catalog = catalog;
-        this.filmList = catalog.getFilms();
+    public Film[] getFilmList() {
+        return filmList;
     }
 
+    public void setFilmList(Film[] filmList) {
+        this.filmList = filmList;
+    }
+
+    public void createFilmCatalog(Integer totalFilmsNumber){
+        filmList = new Film[totalFilmsNumber];
+    }
 
     public boolean add(Film newFilm){
         for (int i = 0; i < filmList.length; i++) {
