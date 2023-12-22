@@ -1,4 +1,4 @@
-package interfaces.example4;
+package interfaces.example4.entity;
 
 public class Film {
     private String filmName;

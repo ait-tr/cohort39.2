@@ -1,8 +1,9 @@
-package interfaces.example4;
+package interfaces.example4.repositories;
 
-import interfaces.example3.FilmCatalog;
 
-public class FilmRepository {
+import interfaces.example4.entity.Film;
+
+public class FilmRepository implements Repository{
 
     Film[] filmList;
 
@@ -10,14 +11,17 @@ public class FilmRepository {
         return filmList;
     }
 
-    public void setFilmList(Film[] filmList) {
-        this.filmList = filmList;
-    }
-
-    public void createFilmCatalog(Integer totalFilmsNumber){
+    @Override
+    public Film[] createFilmCatalog(Integer totalFilmsNumber){
+        if (totalFilmsNumber < 5 ){
+            filmList = new Film[5];
+        } else {
         filmList = new Film[totalFilmsNumber];
+        }
+        return filmList;
     }
 
+    @Override
     public boolean add(Film newFilm){
         for (int i = 0; i < filmList.length; i++) {
             if (filmList[i] == null) {
@@ -28,6 +32,7 @@ public class FilmRepository {
         return false;
     }
 
+    @Override
     public Film findFilmByName(String filmName){
         for (int i = 0; i < filmList.length; i++) {
             if (filmList[i].getFilmName().equals(filmName)) {

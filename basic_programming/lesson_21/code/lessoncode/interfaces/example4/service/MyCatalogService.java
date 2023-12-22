@@ -1,11 +1,12 @@
-package interfaces.example4;
+package interfaces.example4.service;
 
-import interfaces.example3.FilmCatalog;
+import interfaces.example4.entity.Film;
+import interfaces.example4.repositories.Repository;
 
 public class MyCatalogService {
-    public Film[] fillCatalog(FilmRepository repository){
+    public Film[] fillCatalog(Repository repository, Integer totalFilmNumber){
 
-        Film[] newFilmCatalog = repository.getFilmList();
+        Film[] newFilmCatalog = repository.createFilmCatalog(totalFilmNumber);
 
         newFilmCatalog[0] = new Film("Крестный отец (1 часть)", "криминальная драма", 1972);
         newFilmCatalog[1] = new Film("Нечто", "ужасы фантастика", 1982);
