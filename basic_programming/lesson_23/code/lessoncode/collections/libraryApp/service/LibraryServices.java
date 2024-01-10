@@ -1,14 +1,17 @@
 package collections.libraryApp.service;
 
 import collections.libraryApp.entity.Book;
+import collections.libraryApp.repository.BookRepository;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class LibraryServices {
+
+    BookRepository repository = new BookRepository();
     public List<Book> createLibrary() {
-        return new LinkedList<>();
+        return repository.getRepository();
     }
 
     public void fillLibrary(List<Book> ourLibrary, int numberOfElementsAdd){
