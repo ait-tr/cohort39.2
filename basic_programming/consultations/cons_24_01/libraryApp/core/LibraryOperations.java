@@ -55,6 +55,12 @@ public class LibraryOperations {
             outputData.printOurLibrary("Our library after delete books", ourLibrary);
 
 
+            /*
+            для ДЗ
+
+            1) внести изменения в код , чтобы создание новой книги для добавления в начало коллекции или хвост осуществлялось автоматически
+
+             */
 
 
         }
