@@ -3,6 +3,7 @@ package libraryApp.repository;
 import libraryApp.entity.Author;
 import libraryApp.entity.Book;
 import libraryApp.entity.ResponseEntity;
+import libraryApp.service.searchUtil.BookMatcher;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -20,49 +21,19 @@ public class BookRepository {
         return repository;
     }
 
-    public ResponseEntity findById(int bookId){
+    public ResponseEntity findBooks(BookMatcher matcher){
         ArrayList<Book> listOfFoundBooksForResponse = new ArrayList<>();
-        for (int i = 0; i < repository.size(); i++) {
-            if (repository.get(i).getBookId() == bookId) {
-                listOfFoundBooksForResponse.add(repository.get(i));
+        for (Book book : repository) {
+            if (matcher.match(book)) {
+                listOfFoundBooksForResponse.add(book);
             }
         }
 
-        if (listOfFoundBooksForResponse.size() > 0){
-            return new ResponseEntity(listOfFoundBooksForResponse, "Ok");
-        } else {
-            return new ResponseEntity(listOfFoundBooksForResponse, "Book not found");
-        }
+        String status = listOfFoundBooksForResponse.isEmpty() ? "Book not found" : "Ok";
+
+        return new ResponseEntity(listOfFoundBooksForResponse, status);
+
     }
 
-    public ResponseEntity findByAuthor(Author authorForSearch){
-        ArrayList<Book> listOfFoundBooksForResponse = new ArrayList<>();
-        for (int i = 0; i < repository.size(); i++) {
-            if (repository.get(i).getAuthor().equals(authorForSearch)) {
-                listOfFoundBooksForResponse.add(repository.get(i));
-            }
-        }
-
-        if (listOfFoundBooksForResponse.size() > 0){
-            return new ResponseEntity(listOfFoundBooksForResponse, "Ok");
-        } else {
-            return new ResponseEntity(listOfFoundBooksForResponse, "Book not found");
-        }
-    }
-
-    public ResponseEntity findByAuthor(String bookNameSearch){
-        ArrayList<Book> listOfFoundBooksForResponse = new ArrayList<>();
-        for (int i = 0; i < repository.size(); i++) {
-            if (repository.get(i).getNameOfBook().equals(bookNameSearch)) {
-                listOfFoundBooksForResponse.add(repository.get(i));
-            }
-        }
-
-        if (listOfFoundBooksForResponse.size() > 0){
-            return new ResponseEntity(listOfFoundBooksForResponse, "Ok");
-        } else {
-            return new ResponseEntity(listOfFoundBooksForResponse, "Book not found");
-        }
-    }
 
 }

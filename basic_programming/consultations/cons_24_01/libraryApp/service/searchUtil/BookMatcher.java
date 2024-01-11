@@ -3,6 +3,6 @@ package libraryApp.service.searchUtil;
 
 import libraryApp.entity.Book;
 
-interface BookMatcher {
+public interface BookMatcher {
     boolean match(Book book);
 }

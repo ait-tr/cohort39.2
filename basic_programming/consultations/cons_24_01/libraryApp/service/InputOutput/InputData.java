@@ -27,6 +27,6 @@ public class InputData {
     }
 
     public String inputSearchCriteria() {
-        return "Book name ...";
+        return "Book # 12";
     }
 }

@@ -33,15 +33,26 @@ public class LibraryOperations {
             int sizeOfOurLibrary = inputData.inputNumberOfElements();
             List<Book> ourLibrary = services.createLibrary();
             services.fillLibrary(ourLibrary,sizeOfOurLibrary);
-            outputData.printOurLibrary("Our library ", ourLibrary);
+            //outputData.printOurLibrary("Our library ", ourLibrary);
 
             Book newBookTail = new Book(11, new Author(11,"Author 11"), "Book # 11");
             services.addElementIntoOurLibrary(ourLibrary,newBookTail,false);
 
             Book newBookHead = new Book(12, new Author(12,"Author 12"), "Book # 12");
             services.addElementIntoOurLibrary(ourLibrary,newBookHead,true);
+            services.addElementIntoOurLibrary(ourLibrary,newBookHead,true);
+            services.addElementIntoOurLibrary(ourLibrary,newBookHead,true);
+            services.addElementIntoOurLibrary(ourLibrary,newBookHead,true);
+            services.addElementIntoOurLibrary(ourLibrary,newBookHead,true);
 
             outputData.printOurLibrary("Our library after additional new books", ourLibrary);
+
+
+            String searchBookCriteria = "jfkjfj";//inputData.inputSearchCriteria();
+            List<Book> foundedBooks = services.searchBookByBookName(ourLibrary,searchBookCriteria);
+            outputData.printOurLibrary("Книги удовлетворяющие условию поиска: ",foundedBooks);
+            services.deleteBook(ourLibrary,foundedBooks);
+            outputData.printOurLibrary("Our library after delete books", ourLibrary);
 
 
 

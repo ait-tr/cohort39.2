@@ -1,8 +1,11 @@
 package libraryApp.service;
 
 import libraryApp.entity.Book;
+import libraryApp.entity.ResponseEntity;
 import libraryApp.repository.BookRepository;
 import libraryApp.service.InputOutput.InputData;
+import libraryApp.service.searchUtil.BookIdMatcher;
+import libraryApp.service.searchUtil.BookNameMatcher;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,15 +25,29 @@ public class LibraryServices {
         }
     }
 
-    public List<Book> searchBook(List<Book> ourLibrary, String searchCriteria){
-        ArrayList<Book> booksAfterSearch = new ArrayList<>();
-        for (int i = 0; i < ourLibrary.size(); i++) {
-            if (searchCriteria.equals(ourLibrary.get(i).getNameOfBook())) {
-              booksAfterSearch.add(ourLibrary.get(i));
-            }
+    public List<Book> searchBookById(List<Book> ourLibrary, Integer searchCriteria){
+        BookIdMatcher bookIdMatcher = new BookIdMatcher(searchCriteria);
+        ResponseEntity response = repository.findBooks(bookIdMatcher);
+        if (response.getError().equals("Ok")){
+            return response.getBooks();
+        } else {
+            System.out.println(response.getError());
         }
-        return booksAfterSearch;
+        return new ArrayList<>();
     }
+
+    public List<Book> searchBookByBookName(List<Book> ourLibrary, String searchCriteria){
+        BookNameMatcher bookNameMatcher = new BookNameMatcher(searchCriteria);
+        ResponseEntity response = repository.findBooks(bookNameMatcher);
+        if (response.getError().equals("Ok")){
+            return response.getBooks();
+        } else {
+            System.out.println(response.getError());
+        }
+        return new ArrayList<>();
+    }
+
+
 
     public void deleteBook(List<Book> ourLibrary, List<Book> booksForDelete){
         for (int i = 0; i < booksForDelete.size(); i++) {
