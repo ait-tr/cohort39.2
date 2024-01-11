@@ -1,8 +1,7 @@
 package collections.libraryApp.repository;
 
-import collections.libraryApp.entity.Book;
+import libraryApp.entity.Book;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 

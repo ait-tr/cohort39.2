@@ -1,4 +1,4 @@
-package collections.libraryApp;
+package libraryApp;
 
 import libraryApp.core.LibraryOperations;
 

@@ -1,5 +1,6 @@
-package collections.libraryApp.core;
+package libraryApp.core;
 
+import libraryApp.entity.Author;
 import libraryApp.entity.Book;
 import libraryApp.service.InputOutput.InputData;
 import libraryApp.service.LibraryServices;
@@ -17,7 +18,7 @@ public class LibraryOperations {
      - получение данных для создания элементов коллекции
      - проверка корректности данных (валидация) - ?
 
-     2) добавление элементов коллекуии
+     2) добавление элементов коллекции
      - начало
      - конец
 
@@ -33,6 +34,17 @@ public class LibraryOperations {
             List<Book> ourLibrary = services.createLibrary();
             services.fillLibrary(ourLibrary,sizeOfOurLibrary);
             outputData.printOurLibrary("Our library ", ourLibrary);
+
+            Book newBookTail = new Book(11, new Author(11,"Author 11"), "Book # 11");
+            services.addElementIntoOurLibrary(ourLibrary,newBookTail,false);
+
+            Book newBookHead = new Book(12, new Author(12,"Author 12"), "Book # 12");
+            services.addElementIntoOurLibrary(ourLibrary,newBookHead,true);
+
+            outputData.printOurLibrary("Our library after additional new books", ourLibrary);
+
+
+
 
         }
 

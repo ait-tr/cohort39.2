@@ -1,4 +1,4 @@
-package collections.libraryApp.service;
+package libraryApp.service;
 
 import libraryApp.entity.Book;
 import libraryApp.repository.BookRepository;
@@ -37,5 +37,14 @@ public class LibraryServices {
             ourLibrary.remove(booksForDelete.get(i));
         }
     }
+
+    public void addElementIntoOurLibrary(List<Book> ourLibrary, Book newBook, boolean idHead){
+        if (idHead) {
+            ourLibrary.add(0,newBook);
+        } else {
+            ourLibrary.add(newBook);
+        }
+    }
+
 
 }

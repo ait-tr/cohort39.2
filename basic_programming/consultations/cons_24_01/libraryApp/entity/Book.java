@@ -1,6 +1,4 @@
-package collections.libraryApp.entity;
-
-import libraryApp.entity.Author;
+package libraryApp.entity;
 
 public class Book {
 
