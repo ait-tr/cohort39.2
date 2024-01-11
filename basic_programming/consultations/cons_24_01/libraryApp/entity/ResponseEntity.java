@@ -4,18 +4,18 @@ import java.util.List;
 
 public class ResponseEntity {
     private List<Book> books;
-    private String error;
+    private ResponseStatus status;
 
-    public ResponseEntity(List<Book> books, String error) {
+    public ResponseEntity(List<Book> books, ResponseStatus status) {
         this.books = books;
-        this.error = error;
+        this.status = status;
     }
 
     public List<Book> getBooks() {
         return books;
     }
 
-    public String getError() {
-        return error;
+    public ResponseStatus getStatus() {
+        return status;
     }
 }

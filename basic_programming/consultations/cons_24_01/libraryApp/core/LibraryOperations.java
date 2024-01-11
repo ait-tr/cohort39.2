@@ -48,7 +48,7 @@ public class LibraryOperations {
             outputData.printOurLibrary("Our library after additional new books", ourLibrary);
 
 
-            String searchBookCriteria = "jfkjfj";//inputData.inputSearchCriteria();
+            String searchBookCriteria = "";//inputData.inputSearchCriteria();
             List<Book> foundedBooks = services.searchBookByBookName(ourLibrary,searchBookCriteria);
             outputData.printOurLibrary("Книги удовлетворяющие условию поиска: ",foundedBooks);
             services.deleteBook(ourLibrary,foundedBooks);

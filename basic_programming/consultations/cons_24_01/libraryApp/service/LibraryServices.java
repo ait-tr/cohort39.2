@@ -2,6 +2,7 @@ package libraryApp.service;
 
 import libraryApp.entity.Book;
 import libraryApp.entity.ResponseEntity;
+import libraryApp.entity.ResponseStatus;
 import libraryApp.repository.BookRepository;
 import libraryApp.service.InputOutput.InputData;
 import libraryApp.service.searchUtil.BookIdMatcher;
@@ -28,10 +29,10 @@ public class LibraryServices {
     public List<Book> searchBookById(List<Book> ourLibrary, Integer searchCriteria){
         BookIdMatcher bookIdMatcher = new BookIdMatcher(searchCriteria);
         ResponseEntity response = repository.findBooks(bookIdMatcher);
-        if (response.getError().equals("Ok")){
+        if (response.getStatus().equals(ResponseStatus.OK)){
             return response.getBooks();
         } else {
-            System.out.println(response.getError());
+            System.out.println(response.getStatus().getMessage());
         }
         return new ArrayList<>();
     }
@@ -39,10 +40,10 @@ public class LibraryServices {
     public List<Book> searchBookByBookName(List<Book> ourLibrary, String searchCriteria){
         BookNameMatcher bookNameMatcher = new BookNameMatcher(searchCriteria);
         ResponseEntity response = repository.findBooks(bookNameMatcher);
-        if (response.getError().equals("Ok")){
+        if (response.getStatus().equals(ResponseStatus.OK)){
             return response.getBooks();
         } else {
-            System.out.println(response.getError());
+            System.out.println(response.getStatus().getMessage());
         }
         return new ArrayList<>();
     }

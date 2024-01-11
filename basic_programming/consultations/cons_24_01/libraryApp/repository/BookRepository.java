@@ -3,6 +3,7 @@ package libraryApp.repository;
 import libraryApp.entity.Author;
 import libraryApp.entity.Book;
 import libraryApp.entity.ResponseEntity;
+import libraryApp.entity.ResponseStatus;
 import libraryApp.service.searchUtil.BookMatcher;
 
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ public class BookRepository {
             }
         }
 
-        String status = listOfFoundBooksForResponse.isEmpty() ? "Book not found" : "Ok";
+        ResponseStatus status = listOfFoundBooksForResponse.isEmpty() ? ResponseStatus.BOOK_NOT_FOUND : ResponseStatus.OK;
 
         return new ResponseEntity(listOfFoundBooksForResponse, status);
 
