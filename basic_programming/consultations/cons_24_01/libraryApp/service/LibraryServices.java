@@ -18,10 +18,17 @@ public class LibraryServices {
         return repository.getRepository();
     }
 
-    public void fillLibrary(List<Book> ourLibrary, int numberOfElementsAdd){
-        InputData inputData = new InputData();
+    public void fillLibrary(List<Book> ourLibrary, int numberOfElementsAdd,  InputData inputData, boolean isHead){
         for (int i = 0; i < numberOfElementsAdd; i++) {
             Book newBook = inputData.inputNewBook();
+            addElementIntoOurLibrary(ourLibrary, newBook, isHead);
+        }
+    }
+
+    private void addElementIntoOurLibrary(List<Book> ourLibrary, Book newBook, boolean isHead){
+        if (isHead) {
+            ourLibrary.add(0,newBook);
+        } else {
             ourLibrary.add(newBook);
         }
     }
@@ -53,14 +60,6 @@ public class LibraryServices {
     public void deleteBook(List<Book> ourLibrary, List<Book> booksForDelete){
         for (int i = 0; i < booksForDelete.size(); i++) {
             ourLibrary.remove(booksForDelete.get(i));
-        }
-    }
-
-    public void addElementIntoOurLibrary(List<Book> ourLibrary, Book newBook, boolean idHead){
-        if (idHead) {
-            ourLibrary.add(0,newBook);
-        } else {
-            ourLibrary.add(newBook);
         }
     }
 

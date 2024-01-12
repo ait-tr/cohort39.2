@@ -32,27 +32,20 @@ public class LibraryOperations {
         public void run(){
             int sizeOfOurLibrary = inputData.inputNumberOfElements();
             List<Book> ourLibrary = services.createLibrary();
-            services.fillLibrary(ourLibrary,sizeOfOurLibrary);
+            services.fillLibrary(ourLibrary,sizeOfOurLibrary, inputData, false);
             //outputData.printOurLibrary("Our library ", ourLibrary);
 
-            Book newBookTail = new Book(11, new Author(11,"Author 11"), "Book # 11");
-            services.addElementIntoOurLibrary(ourLibrary,newBookTail,false);
-
-            Book newBookHead = new Book(12, new Author(12,"Author 12"), "Book # 12");
-            services.addElementIntoOurLibrary(ourLibrary,newBookHead,true);
-            services.addElementIntoOurLibrary(ourLibrary,newBookHead,true);
-            services.addElementIntoOurLibrary(ourLibrary,newBookHead,true);
-            services.addElementIntoOurLibrary(ourLibrary,newBookHead,true);
-            services.addElementIntoOurLibrary(ourLibrary,newBookHead,true);
+            services.fillLibrary(ourLibrary,1,inputData, false);
+            services.fillLibrary(ourLibrary,5,inputData, true);
 
             outputData.printOurLibrary("Our library after additional new books", ourLibrary);
 
 
-            String searchBookCriteria = "";//inputData.inputSearchCriteria();
-            List<Book> foundedBooks = services.searchBookByBookName(ourLibrary,searchBookCriteria);
-            outputData.printOurLibrary("Книги удовлетворяющие условию поиска: ",foundedBooks);
-            services.deleteBook(ourLibrary,foundedBooks);
-            outputData.printOurLibrary("Our library after delete books", ourLibrary);
+//            String searchBookCriteria = "";//inputData.inputSearchCriteria();
+//            List<Book> foundedBooks = services.searchBookByBookName(ourLibrary,searchBookCriteria);
+//            outputData.printOurLibrary("Книги удовлетворяющие условию поиска: ",foundedBooks);
+//            services.deleteBook(ourLibrary,foundedBooks);
+//            outputData.printOurLibrary("Our library after delete books", ourLibrary);
 
 
             /*
