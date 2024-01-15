@@ -20,10 +20,10 @@ public class Student implements Comparable<Student> {
     }
 
     @Override
-    public int compareTo(Student o) {
-      int compareResult = roll - o.roll;
+    public int compareTo(Student newStudent) {
+      int compareResult = roll - newStudent.roll;
       if (compareResult == 0) {
-          compareResult = name.compareTo(o.name);
+          compareResult = name.compareTo(newStudent.name);
       }
       return compareResult;
     }
