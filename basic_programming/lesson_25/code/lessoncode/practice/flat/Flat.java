@@ -1,4 +1,4 @@
-package practice;
+package practice.flat;
 
 public class Flat implements Comparable<Flat> {
     private double area;

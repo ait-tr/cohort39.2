@@ -1,4 +1,4 @@
-package practice;
+package practice.flat;
 
 import java.util.TreeSet;
 

@@ -1,6 +1,5 @@
-package practice;
+package practice.suitcase;
 
-import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.TreeSet;
 

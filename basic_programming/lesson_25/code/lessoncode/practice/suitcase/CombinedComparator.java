@@ -1,4 +1,4 @@
-package practice;
+package practice.suitcase;
 
 import java.util.Comparator;
 
