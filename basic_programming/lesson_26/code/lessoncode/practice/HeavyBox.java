@@ -20,12 +20,15 @@ public class HeavyBox extends Box{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         HeavyBox heavyBox = (HeavyBox) o;
-        return Double.compare(weight, heavyBox.weight) == 0;
+        return Double.compare(weight, heavyBox.weight) == 0 &&
+                Double.compare(getLength(),heavyBox.getLength()) == 0 &&
+                Double.compare(getWidth(),heavyBox.getWidth()) == 0 &&
+                Double.compare(getHeight(),heavyBox.getHeight()) == 0;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(weight);
+        return Objects.hash(weight, getLength(), getHeight(), getWidth());
     }
 
     @Override
