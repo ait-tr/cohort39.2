@@ -3,54 +3,57 @@ package service;
 import entity.InitialMorseTable;
 
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Objects;
+
 
 public class CodingProcessService {
 
-    InitialMorseTable initialMorseTable = new InitialMorseTable();
+    private final InitialMorseTable initialMorseTable = new InitialMorseTable();
 
-    public String codingOrDecodingProcess(String data, boolean isCoding){
-
+    public String codingOrDecodingProcess(String data, boolean isCoding) {
         return isCoding ? coding(data) : decoding(data);
     }
 
-
-    private String coding(String dataForCodingProcess){
-        String codingResult = "";
-        List<String> dataForCoding  = prepareDataForCoding(dataForCodingProcess,"");
-        for (String stringElement : dataForCoding){
-            String codingElement = initialMorseTable.getTextToMorse().get(stringElement);
-            codingResult = codingResult + codingElement + " ";
+    private String coding(String data) {
+        StringBuilder codingResult = new StringBuilder();
+        data = data.toUpperCase();
+        for (char character : data.toCharArray()) {
+            if (character == ' ') {
+                codingResult.append("  ");  // Двойной пробел для разделения слов
+            } else {
+                String morse = initialMorseTable.getTextToMorse().getOrDefault(String.valueOf(character), "");
+                codingResult.append(morse).append(" "); // Одинарный пробел для разделения символов
+            }
         }
-        return codingResult;
+        return codingResult.toString().trim();
     }
 
+    private String decoding(String data) {
+        StringBuilder decodingResult = new StringBuilder();
+        boolean previousWasSpace = false; // Флаг для отслеживания последовательных пробелов
+        String[] splittedData = data.split(" ");
 
-    private String decoding(String dataForDecodingProcess){
-        String decodingResult = "";
-        List<String> dataForDecoding = prepareDataForCoding(dataForDecodingProcess, " ");
-        for (String stringElement : dataForDecoding) {
-            String decodingElement = initialMorseTable.getMorseToText().get(stringElement);
-            decodingResult = decodingResult + decodingElement;
+        System.out.println(Arrays.toString(splittedData));
+
+        for (String morseCode : splittedData) {
+            if (morseCode.isEmpty()) {
+                if (previousWasSpace) {
+                    decodingResult.append(" "); // Добавление пробела между словами
+                    previousWasSpace = false;
+                } else {
+                    previousWasSpace = true;
+                }
+            } else {
+                if (previousWasSpace) {
+                    System.out.println("");
+                    decodingResult.append(" "); // Добавление пробела между словами, если предыдущий символ был пробелом
+                }
+                String text = initialMorseTable.getMorseToText().getOrDefault(morseCode, "");
+                decodingResult.append(text);
+                previousWasSpace = false;
+            }
         }
-        return decodingResult;
-    }
 
-
-    private List<String> prepareDataForCoding(String dataForCodingProcess, String regexFirst){
-        List<String> separatedElementFromDataSource = new LinkedList<>();
-
-        dataForCodingProcess = dataForCodingProcess.toUpperCase();
-        String[] splittedElement = dataForCodingProcess.split(regexFirst);
-        System.out.println(Arrays.toString(splittedElement));
-
-        for (int i = 0; i < splittedElement.length; i++) {
-            if (Objects.equals(splittedElement[i], "")) {splittedElement[i] = " ";}
-            separatedElementFromDataSource.add(splittedElement[i]);
-        }
-        return separatedElementFromDataSource;
+        return decodingResult.toString();
     }
 
 }
