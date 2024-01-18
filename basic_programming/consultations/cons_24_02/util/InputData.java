@@ -2,15 +2,11 @@ package util;
 
 public class InputData {
 
-    InputDataForCoding encodingInput = new InputDataForCoding();
+    InputDataForCoding codingInput = new InputDataForCoding();
 
     public String request(boolean isCoding){
-        String data="";
-       if (isCoding){
-           data = encodingInput.response();
-       }
 
-       return data;
+       return isCoding ? codingInput.responseText() : codingInput.responseMorse();
     }
 
 }

@@ -7,12 +7,18 @@ import java.util.Set;
 public class InitialMorseTable {
     
     private Map<String, String> textToMorse = new HashMap<>();
+    private Map<String, String> morseToText = new HashMap<>();
 
     public InitialMorseTable() {
         fillTextToMorse();
+        fillMorseToText();
     }
     public Map<String, String> getTextToMorse() {
         return textToMorse;
+    }
+
+    public Map<String, String> getMorseToText() {
+        return morseToText;
     }
 
     private void fillTextToMorse() {
@@ -79,5 +85,15 @@ public class InitialMorseTable {
         textToMorse.put(" ", " ");
     }
 
+    private void fillMorseToText(){
+//        for (Map.Entry<String, String> entry : textToMorse.entrySet()){
+//            morseToText.put(entry.getValue(), entry.getKey());
+//        }
+        // -------- второй вариант ------
+
+        for (String key : textToMorse.keySet()){
+            morseToText.put(textToMorse.get(key) , key);
+        }
+    }
     
 }

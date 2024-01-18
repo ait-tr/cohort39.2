@@ -2,7 +2,11 @@ package util;
 
 public class InputDataForCoding {
 
-    String response(){
+    String responseText(){
         return "Привет! Как дела?";
+    }
+
+    String responseMorse() {
+        return ".−−. .−. −.−− .−− . − -.-.--   −.− .− −.−   −.. . .−.. .− ..--..";
     }
 }

@@ -9,15 +9,10 @@ public class CodingProcessService {
 
     InitialMorseTable initialMorseTable = new InitialMorseTable();
 
-    public String codingOrDecodingProcess(String dataForCodingProcess, boolean isCoding){
-       String codingResult = "";
-        if (isCoding){
-            codingResult = coding(dataForCodingProcess);
-        }
+    public String codingOrDecodingProcess(String data, boolean isCoding){
 
-        return codingResult;
+        return isCoding ? coding(data) : decoding(data);
     }
-
 
 
     private String coding(String dataForCodingProcess){
@@ -28,6 +23,17 @@ public class CodingProcessService {
             codingResult = codingResult + codingElement + " ";
         }
         return codingResult;
+    }
+
+
+    private String decoding(String dataForDecodingProcess){
+        String decodingResult = "";
+        List<String> dataForDecoding = prepareDataForCoding(dataForDecodingProcess, " ");
+        for (String stringElement : dataForDecoding) {
+            String decodingElement = initialMorseTable.getMorseToText().get(stringElement);
+            decodingResult = decodingResult + decodingElement;
+        }
+        return decodingResult;
     }
 
 
