@@ -2,8 +2,10 @@ package service;
 
 import entity.InitialMorseTable;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 public class CodingProcessService {
 
@@ -42,8 +44,10 @@ public class CodingProcessService {
 
         dataForCodingProcess = dataForCodingProcess.toUpperCase();
         String[] splittedElement = dataForCodingProcess.split(regexFirst);
+        System.out.println(Arrays.toString(splittedElement));
 
         for (int i = 0; i < splittedElement.length; i++) {
+            if (Objects.equals(splittedElement[i], "")) {splittedElement[i] = " ";}
             separatedElementFromDataSource.add(splittedElement[i]);
         }
         return separatedElementFromDataSource;
