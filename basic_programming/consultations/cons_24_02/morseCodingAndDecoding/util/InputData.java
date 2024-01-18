@@ -1,4 +1,4 @@
-package util;
+package morseCodingAndDecoding.util;
 
 public class InputData {
 

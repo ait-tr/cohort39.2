@@ -1,7 +1,7 @@
-package service;
+package morseCodingAndDecoding.service;
 
 
-import util.InputData;
+import morseCodingAndDecoding.util.InputData;
 
 public class MorseService {
     InputData inputData = new InputData();

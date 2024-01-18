@@ -1,4 +1,4 @@
-package entity;
+package morseCodingAndDecoding.entity;
 
 import java.util.HashMap;
 import java.util.Map;

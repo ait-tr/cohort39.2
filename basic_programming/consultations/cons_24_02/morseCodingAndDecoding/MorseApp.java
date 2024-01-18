@@ -1,4 +1,6 @@
-import service.MorseService;
+package morseCodingAndDecoding;
+
+import morseCodingAndDecoding.service.MorseService;
 
 public class MorseApp {
 
