@@ -1,4 +1,4 @@
-package practice.library;
+package practice.libraryVar1;
 
 public class LibraryManagement {
     public static void main(String[] args) {

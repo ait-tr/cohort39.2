@@ -1,4 +1,4 @@
-package practice.library;
+package practice.libraryVar1;
 
 import java.util.*;
 
