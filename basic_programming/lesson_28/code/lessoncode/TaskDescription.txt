@@ -31,7 +31,7 @@ String description;
 Будем использовать ИНТЕРФЕЙС - в котором за декларируем необходимы методы, а уже потом создадим класс его имплеметирующий
 
 ProductRepository - методы:
-void add(product product)
+Integer add(product product)
 List<Product> findAll()
 Product findById(Integer id)
 
