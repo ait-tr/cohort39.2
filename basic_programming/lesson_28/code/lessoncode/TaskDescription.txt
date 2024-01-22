@@ -55,6 +55,13 @@ ProductService в котором будет реализована бизнес-
 
 6) DTO (data transfer object) -
 а) ProductDTO{
+String productName;
+Double price;
+String description;
+}
 
+б) ResponseDto  {
+int id;
+List<Errors> errors
 }
 
