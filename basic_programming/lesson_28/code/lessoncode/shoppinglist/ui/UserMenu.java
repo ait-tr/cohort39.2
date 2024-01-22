@@ -13,7 +13,7 @@ public class UserMenu {
     public void startUserMenu() {
         while (true) {
             for (int i = 0; i < commands.size(); i++) {
-                System.out.println(i + ". " + commands.get(i));
+                System.out.println(i + ". " + commands.get(i).getMenuName());
             }
             System.out.println("Make your choice: ");
             Scanner scanner = new Scanner(System.in);
