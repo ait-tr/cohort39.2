@@ -1,9 +1,6 @@
 package shoppinglist.service;
 
-import shoppinglist.dto.ProductDto;
-import shoppinglist.dto.ProductForClient;
-import shoppinglist.dto.ResponseForClientAddProduct;
-import shoppinglist.dto.ResponseForClientFindAllProducts;
+import shoppinglist.dto.*;
 import shoppinglist.dto.error.ErrorCode;
 import shoppinglist.dto.error.ErrorDto;
 import shoppinglist.entity.Product;
@@ -44,18 +41,31 @@ public class ProductService {
         List<ProductForClient> response = new ArrayList<>();
         List<ErrorDto> errors = new ArrayList<>();
 
+        for (Product product : products){
+            response.add(new ProductForClient(product.getProductName(), product.getDescription()));
+        }
+
         if (products.isEmpty()) {
             errors.add(new ErrorDto(ErrorCode.IE_400, "No any records into database"));
-        } else {
-            for (int i = 0; i < products.size(); i++) {
-                response.add(new ProductForClient(products.get(i).getProductName(), products.get(i).getDescription()));
-            }
         }
 
         return new ResponseForClientFindAllProducts(response, errors);
     }
 
-    public ProductForClient findById(){
+    public ResponseForClientFindByIdProduct findById(Integer id){
+        Product productById = productRepository.findById(id);
+
+        List<ErrorDto> errors = new ArrayList<>();
+        ProductForClient productForClient = new ProductForClient("","");
+
+        if (productById != null) {
+            productForClient = new ProductForClient(productById.getProductName(), productById.getDescription());
+        }
+        else {
+            errors.add(new ErrorDto(ErrorCode.IE_400,"Product by ID: " + id + " not found"));
+        }
+
+        return new ResponseForClientFindByIdProduct(productForClient, errors);
 
     }
 
