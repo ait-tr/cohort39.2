@@ -1,6 +1,7 @@
 package optional;
 
 import java.util.Map;
+import java.util.Optional;
 
 public class PersonRepository {
 
@@ -10,7 +11,7 @@ public class PersonRepository {
         this.persons = persons;
     }
 
-    public Person findById(Long id){
-        return persons.get(id);
+    public Optional<Person> findById(Long id){
+        return Optional.ofNullable(persons.get(id));
     }
 }

@@ -2,6 +2,7 @@ package optional;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class PersonsDemo {
     public static void main(String[] args) {
@@ -14,18 +15,25 @@ public class PersonsDemo {
 
         PersonRepository personRepository = new PersonRepository(map);
 
-        Person myPerson = personRepository.findById(1L);
-        String personName = myPerson.getName();
+        Optional<Person> myPersonOptional = personRepository.findById(1L);
 
+        if (myPersonOptional.isPresent()) {
 
-        System.out.println(personName);
+            Person myPerson = myPersonOptional.get();
 
-        Person myPerson2 = personRepository.findById(2L);
+            String personName = myPerson.getName();
 
-        String personName2 = myPerson2.getName();
+            System.out.println(personName);
+        }
 
+        Optional<Person> myPerson2Optional = personRepository.findById(2L);
 
-        System.out.println(personName2);
+        if (myPerson2Optional.isPresent()) {
+            String personName2 = myPerson2Optional.get().getName();
+
+            System.out.println(personName2);
+        }
+
 
 
     }
