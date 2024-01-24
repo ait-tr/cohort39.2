@@ -27,4 +27,9 @@ public class FindAllProductMenu implements MenuCommand{
     public String getMenuName() {
         return "Find all products";
     }
+
+    @Override
+    public boolean shouldExit() {
+        return false;
+    }
 }

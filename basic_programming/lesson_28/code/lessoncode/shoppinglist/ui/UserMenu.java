@@ -11,14 +11,26 @@ public class UserMenu {
     }
 
     public void startUserMenu() {
-        while (true) {
+        Scanner scanner = new Scanner(System.in);
+        boolean exitRequested = false;
+
+        while (!exitRequested) {
             for (int i = 0; i < commands.size(); i++) {
                 System.out.println(i + ". " + commands.get(i).getMenuName());
             }
             System.out.println("Make your choice: ");
-            Scanner scanner = new Scanner(System.in);
+
             int userInput = scanner.nextInt();
-            commands.get(userInput).executeCommand();
+            if (userInput < 0 || userInput >= commands.size()) {
+                System.out.println("Invalid option, please try again.");
+            }
+            else {
+                MenuCommand command = commands.get(userInput);
+                command.executeCommand();
+                exitRequested = command.shouldExit();
+            }
+
+
         }
     }
 }

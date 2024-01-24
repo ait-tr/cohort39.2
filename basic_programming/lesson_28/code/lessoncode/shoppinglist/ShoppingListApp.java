@@ -27,11 +27,11 @@ public class ShoppingListApp {
         ExitMenu exitMenu = new ExitMenu();
 
         List<MenuCommand> menuCommands = new ArrayList<>();
+
         menuCommands.add(addProductMenu);
         menuCommands.add(findAllProductMenu);
         menuCommands.add(findByIdProductMenu);
         menuCommands.add(deleteProductMenu);
-        menuCommands.add(exitMenu);
 
         UserMenu ui = new UserMenu(menuCommands);
         ui.startUserMenu();

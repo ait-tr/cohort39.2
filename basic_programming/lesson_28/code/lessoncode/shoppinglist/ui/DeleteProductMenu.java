@@ -30,4 +30,9 @@ public class DeleteProductMenu implements MenuCommand{
     public String getMenuName() {
         return "Delete product";
     }
+
+    @Override
+    public boolean shouldExit() {
+        return false;
+    }
 }

@@ -29,4 +29,9 @@ public class FindByIdProductMenu implements MenuCommand{
     public String getMenuName() {
         return "Find product by ID";
     }
+
+    @Override
+    public boolean shouldExit() {
+        return false;
+    }
 }

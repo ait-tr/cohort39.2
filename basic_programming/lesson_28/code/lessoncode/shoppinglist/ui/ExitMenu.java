@@ -11,4 +11,9 @@ public class ExitMenu implements MenuCommand{
     public String getMenuName() {
         return "Exit";
     }
+
+    @Override
+    public boolean shouldExit() {
+        return true;
+    }
 }

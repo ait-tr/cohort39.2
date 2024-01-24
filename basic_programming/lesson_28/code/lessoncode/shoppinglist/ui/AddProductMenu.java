@@ -34,4 +34,9 @@ public class AddProductMenu implements MenuCommand{
     public String getMenuName() {
         return "Add new product";
     }
+
+    @Override
+    public boolean shouldExit() {
+        return false;
+    }
 }
