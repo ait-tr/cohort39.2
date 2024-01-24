@@ -3,6 +3,7 @@ package shoppinglist.ui;
 import shoppinglist.dto.ResponseForClientFindAllProducts;
 import shoppinglist.dto.ResponseForClientFindByIdProduct;
 import shoppinglist.service.ProductService;
+import shoppinglist.service.util.UserInput;
 
 import java.util.Scanner;
 
@@ -16,9 +17,8 @@ public class FindByIdProductMenu implements MenuCommand{
 
     @Override
     public void executeCommand() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter product id for search:");
-        Integer idForSearch = scanner.nextInt();
+
+        Integer idForSearch = UserInput.getInt("Please enter product id for search:");
 
         ResponseForClientFindByIdProduct findByIdResult = service.findById(idForSearch);
         System.out.println(findByIdResult);

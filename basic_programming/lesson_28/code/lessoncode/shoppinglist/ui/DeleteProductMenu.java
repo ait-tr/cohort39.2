@@ -4,6 +4,7 @@ import shoppinglist.dto.ProductDto;
 import shoppinglist.dto.ResponseForClientAddProduct;
 import shoppinglist.dto.ResponseForClientForDelete;
 import shoppinglist.service.ProductService;
+import shoppinglist.service.util.UserInput;
 
 import java.util.Scanner;
 
@@ -17,9 +18,8 @@ public class DeleteProductMenu implements MenuCommand{
 
     @Override
     public void executeCommand() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter product id for delete:");
-        Integer idFroDelete = scanner.nextInt();
+
+        Integer idFroDelete = UserInput.getInt("Please enter product id for delete:");
 
         ResponseForClientForDelete deleteResult = service.deleteById(idFroDelete);
         System.out.println(deleteResult);

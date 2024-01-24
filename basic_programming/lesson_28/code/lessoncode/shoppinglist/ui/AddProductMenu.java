@@ -3,6 +3,7 @@ package shoppinglist.ui;
 import shoppinglist.dto.ProductDto;
 import shoppinglist.dto.ResponseForClientAddProduct;
 import shoppinglist.service.ProductService;
+import shoppinglist.service.util.UserInput;
 
 import java.util.Scanner;
 
@@ -16,13 +17,11 @@ public class AddProductMenu implements MenuCommand{
 
     @Override
     public void executeCommand() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter product name:");
-        String name = scanner.nextLine();
-        System.out.println("Please enter product description:");
-        String description = scanner.nextLine();
-        System.out.println("Please enter product price:");
-        Double price = scanner.nextDouble();
+
+        String name = UserInput.getText("Please enter product name:");
+        String description = UserInput.getText("Please enter product description:");
+        Double price = UserInput.getDouble("Please enter product price:");
+
         ProductDto productDto = new ProductDto(name, price, description);
 
         ResponseForClientAddProduct addResult = service.addNewProduct(productDto);
