@@ -32,6 +32,7 @@ public class ShoppingListApp {
         menuCommands.add(findAllProductMenu);
         menuCommands.add(findByIdProductMenu);
         menuCommands.add(deleteProductMenu);
+        menuCommands.add(exitMenu);
 
         UserMenu ui = new UserMenu(menuCommands);
         ui.startUserMenu();
