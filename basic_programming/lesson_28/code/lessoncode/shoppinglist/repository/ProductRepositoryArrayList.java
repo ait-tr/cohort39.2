@@ -4,6 +4,7 @@ import shoppinglist.dto.ProductDto;
 import shoppinglist.entity.Product;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ProductRepositoryArrayList implements ProductRepository{
@@ -39,5 +40,19 @@ public class ProductRepositoryArrayList implements ProductRepository{
         }
 
         return null;
+    }
+
+    @Override
+    public boolean deleteById(Integer id) {
+        Iterator<Product> iterator = database.iterator();
+        while (iterator.hasNext()) {
+            Product product = iterator.next();
+            if (product.getId().equals(id)) {
+                iterator.remove();
+                return true;
+            }
+        }
+
+        return false;
     }
 }

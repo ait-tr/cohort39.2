@@ -20,4 +20,14 @@ public class ResponseForClientFindByIdProduct {
     public List<ErrorDto> getErrorDtoList() {
         return errorDtoList;
     }
+
+    @Override
+    public String toString() {
+        return "ResponseForClientFindByIdProduct{" +
+                "productForClients=" + productForClients +
+                ", errorDtoList=" + errorDtoList +
+                '}';
+    }
 }
+
+

@@ -10,4 +10,5 @@ public interface ProductRepository {
     Integer addProduct(ProductDto productDto);
     List<Product> findAll();
     Product findById(Integer id);
+    boolean deleteById(Integer id);
 }

@@ -69,4 +69,14 @@ public class ProductService {
 
     }
 
+    public ResponseForClientForDelete deleteById(Integer id){
+        List<ErrorDto> errors = new ArrayList<>();
+        boolean deleted = productRepository.deleteById(id);
+        if (deleted == false) {
+            errors = List.of(new ErrorDto(ErrorCode.IE_400, "Product by ID: " + id + " not found"));
+        }
+
+        return new ResponseForClientForDelete(deleted, errors);
+    }
+
 }

@@ -22,11 +22,15 @@ public class ShoppingListApp {
 
         AddProductMenu addProductMenu = new AddProductMenu(service);
         FindAllProductMenu findAllProductMenu = new FindAllProductMenu(service);
+        FindByIdProductMenu findByIdProductMenu = new FindByIdProductMenu(service);
+        DeleteProductMenu deleteProductMenu = new DeleteProductMenu(service);
         ExitMenu exitMenu = new ExitMenu();
 
         List<MenuCommand> menuCommands = new ArrayList<>();
         menuCommands.add(addProductMenu);
         menuCommands.add(findAllProductMenu);
+        menuCommands.add(findByIdProductMenu);
+        menuCommands.add(deleteProductMenu);
         menuCommands.add(exitMenu);
 
         UserMenu ui = new UserMenu(menuCommands);
