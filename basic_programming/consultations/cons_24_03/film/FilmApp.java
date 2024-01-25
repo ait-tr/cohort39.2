@@ -11,6 +11,7 @@ public class FilmApp {
         service.addFilm(new Film("Film 3", "Comedy", "D1"));
 
         service.printFilmsByGenre("Comedy");
+        System.out.println("-----------");
         service.printFilmsByDirector("D1");
     }
 }
