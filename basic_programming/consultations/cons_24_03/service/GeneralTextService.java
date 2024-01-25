@@ -6,6 +6,7 @@ import entity.TextData;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class GeneralTextService {
 
@@ -50,6 +51,16 @@ public class GeneralTextService {
             if (entry.getValue() == minFrequency) {
                 leastFrequentWords.add(entry.getKey());
             }
+
+
+//         Сценарий 2
+//            Set<String> keys = wordsCounter.keySet();
+//
+//            for (String currentKey : keys) {
+//                Integer currentValue = wordsCounter.get(currentKey);
+//            }
+
+
         }
 
         return new NumbersFrequentWords(maxFrequency, minFrequency);
