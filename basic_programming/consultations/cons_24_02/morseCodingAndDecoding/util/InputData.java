@@ -1,8 +1,10 @@
 package morseCodingAndDecoding.util;
 
+import morseCodingAndDecoding2.util.InputDataForCoding;
+
 public class InputData {
 
-    InputDataForCoding codingInput = new InputDataForCoding();
+    morseCodingAndDecoding2.util.InputDataForCoding codingInput = new InputDataForCoding();
 
     public String request(boolean isCoding){
 

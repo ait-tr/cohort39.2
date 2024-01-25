@@ -1,6 +1,6 @@
 package morseCodingAndDecoding.service;
 
-import morseCodingAndDecoding.entity.InitialMorseTable;
+import morseCodingAndDecoding2.entity.InitialMorseTable;
 
 import java.util.Arrays;
 
