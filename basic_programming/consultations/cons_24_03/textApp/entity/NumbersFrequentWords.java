@@ -1,4 +1,4 @@
-package entity;
+package textApp.entity;
 
 public class NumbersFrequentWords {
     Integer maxFrequency;

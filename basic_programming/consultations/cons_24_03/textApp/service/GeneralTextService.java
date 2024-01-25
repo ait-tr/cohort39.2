@@ -1,12 +1,11 @@
-package service;
+package textApp.service;
 
-import entity.NumbersFrequentWords;
-import entity.TextData;
+import textApp.entity.NumbersFrequentWords;
+import textApp.entity.TextData;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class GeneralTextService {
 

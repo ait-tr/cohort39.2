@@ -1,7 +1,7 @@
-package service.util;
+package textApp.service.util;
 
-import entity.NumbersFrequentWords;
-import entity.TextData;
+import textApp.entity.NumbersFrequentWords;
+import textApp.entity.TextData;
 
 import java.util.Map;
 

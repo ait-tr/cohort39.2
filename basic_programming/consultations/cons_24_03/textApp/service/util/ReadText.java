@@ -1,4 +1,4 @@
-package service.util;
+package textApp.service.util;
 
 public class ReadText {
 

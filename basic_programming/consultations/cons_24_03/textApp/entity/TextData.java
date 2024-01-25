@@ -1,4 +1,4 @@
-package entity;
+package textApp.entity;
 
 import java.util.*;
 

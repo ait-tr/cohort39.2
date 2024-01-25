@@ -1,7 +1,7 @@
-package service;
+package textApp.service;
 
-import entity.TextData;
-import service.util.ReadText;
+import textApp.entity.TextData;
+import textApp.service.util.ReadText;
 
 public class ReceiveTextService {
 
