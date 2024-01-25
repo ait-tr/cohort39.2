@@ -1,12 +1,11 @@
 package morseCodingAndDecoding.service;
 
 
-import morseCodingAndDecoding2.service.CodingProcessService;
-import morseCodingAndDecoding2.util.InputData;
+import morseCodingAndDecoding.util.InputData;
 
 public class MorseService {
     InputData inputData = new InputData();
-    morseCodingAndDecoding2.service.CodingProcessService codingProcessService = new CodingProcessService();
+    CodingProcessService codingProcessService = new CodingProcessService();
 
     public void codingProcess(){
 
