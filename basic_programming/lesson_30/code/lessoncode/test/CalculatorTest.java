@@ -1,47 +1,49 @@
 package test;
 
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
 public class CalculatorTest {
-    public static void main(String[] args) {
 
-        Calculator calculator = new Calculator();
+    Calculator calculator = new Calculator();
 
+    int x = 20;
+    int y;
 
-        int xTestValue = 20;
-        int yTestValue = 10;
-
+    @Test
+    public void sum() {
+        y = 10;
         int expectedResult = 30;
-        int actualResult = calculator.sum(xTestValue, yTestValue);
+        int actualResult = calculator.sum(x,y);
 
-        printTestResult("Test method 'sum'", expectedResult, actualResult);
-
-
-        expectedResult = 10;
-        actualResult = calculator.sub(xTestValue, yTestValue);
-
-        printTestResult("Test method 'sub'", expectedResult, actualResult);
-
-
-        expectedResult = 200;
-        actualResult = calculator.multi(xTestValue, yTestValue);
-
-        printTestResult("Test method 'multi'", expectedResult, actualResult);
-
-        expectedResult = 2;
-        actualResult = calculator.div(xTestValue, yTestValue);
-
-        printTestResult("Test method 'div'", expectedResult, actualResult);
-
-
-
-
+        assertEquals(expectedResult, actualResult);
     }
 
-    private static void printTestResult(String message, double expectedResult, double actualResult){
-        if (expectedResult == actualResult) {
-            System.out.println(message + " is OK!");
-        } else {
-            System.out.println(message + " is FAIL!");
-            System.out.println("Expected result: " + expectedResult + ", but received : " + actualResult);
-        }
+    @Test
+    public void sub() {
+        y = 20;
+        int expectedResult = 0;
+        int actualResult = calculator.sub(x,y);
+
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void multi() {
+        y = 15;
+        int expectedResult = 300;
+        int actualResult = calculator.multi(x,y);
+
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void div() {
+        y = 10;
+        int expectedResult = 2;
+        int actualResult = calculator.div(x,y);
+
+        assertEquals(expectedResult, actualResult);
     }
 }
