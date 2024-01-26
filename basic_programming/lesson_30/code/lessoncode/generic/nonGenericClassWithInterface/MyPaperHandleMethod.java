@@ -1,4 +1,6 @@
 package generic.nonGenericClassWithInterface;
 
-public class MyPaperHandleMethod {
+import generic.HandleMethod;
+
+public class MyPaperHandleMethod extends HandleMethod {
 }

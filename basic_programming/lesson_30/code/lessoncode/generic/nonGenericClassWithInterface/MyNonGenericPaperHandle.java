@@ -8,4 +8,9 @@ public class MyNonGenericPaperHandle implements GarbageHandler<Paper, MyPaperHan
     public void handle(Paper what, MyPaperHandleMethod how) {
         // здесь что-то делается с бумажным мусором способ MyPaperHandleMethod
     }
+
+    @Override
+    public <E> void transfer(E dangerousWaste) {
+
+    }
 }
