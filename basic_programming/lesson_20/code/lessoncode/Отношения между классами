@@ -2,8 +2,8 @@
 
 принцип отношений основан на наследовании классов или реализации интерфейсов
 
-class Box   ->  class HeavyBox extends Box
-HeavyBox IS-A Box
+class generic.Box   ->  class HeavyBox extends generic.Box
+HeavyBox IS-A generic.Box
 
 
 

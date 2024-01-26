@@ -11,7 +11,7 @@ public class Box extends BoxSuperSmall{
 
     @Override
     public String toString() {
-        return "Box{" +
+        return "generic.Box{" +
                 "length=" + length +
                 ", width=" + width +
                 ", deep=" + deep +
