@@ -10,7 +10,7 @@ public class TaxCalculatorImplTest {
 
 
     @Test
-    public void calculateTaxLess20000() {
+    public void calculateTaxLessOrEqual20000() {
 
         double income = 100;
         double expectedTax = 25;
