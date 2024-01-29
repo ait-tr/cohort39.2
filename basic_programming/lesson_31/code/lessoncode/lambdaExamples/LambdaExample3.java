@@ -1,10 +1,19 @@
 package lambdaExamples;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class LambdaExample3 {
     public static void main(String[] args) {
+
+        ListMerge listMerge = (list1, list2) -> {
+            List<String> merge = new ArrayList<>(list1);
+            merge.addAll(list2);
+            return merge;
+        };
+
+
         List<String> list1 = new ArrayList<>();
         List<String> list2 = new ArrayList<>();
 
@@ -20,6 +29,10 @@ public class LambdaExample3 {
         list2.add("Istanbul");
 
 
+        List<String> merge = listMerge.merge(list1, list2);
+
+        Collections.sort(merge);
+        System.out.println(merge);
 
     }
 }
