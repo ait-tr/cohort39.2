@@ -33,8 +33,8 @@ public class ClientService {
        return clientSupplier.get();
     };
 
-    public Response<Client> add(){
-        Client newClient = createClient();
+    public Response<Client> add(Client client){
+        Client newClient = database.add(client);
         return new Response<>(newClient, "Ok");
     };
 
