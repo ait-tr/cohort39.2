@@ -34,9 +34,7 @@ public class ClientService {
     };
 
     public Response<Client> add(Client client){
-        String clientName = userInput.uiText("Введите имя клиента");
-        String descriptionName = userInput.uiText("Введите описание клиента");
-        Client newClient = new Client(clientName,descriptionName);
+        Client newClient = createClient();
         return new Response<>(newClient, "Ok");
     };
 
