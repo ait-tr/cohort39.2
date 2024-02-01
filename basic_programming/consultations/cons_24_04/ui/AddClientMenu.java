@@ -22,7 +22,7 @@ public class AddClientMenu implements MenuCommand {
         Client newClient = service.createClient();
 
         Response<Client> response = service.add(newClient);
-        if (response.equals("Ok")) {
+        if (response.getMessage().equals("Ok")) {
             System.out.println(response.getData());
         } else {
             System.out.println(response.getMessage());

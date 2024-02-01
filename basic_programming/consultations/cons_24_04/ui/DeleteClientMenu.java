@@ -19,7 +19,7 @@ public class DeleteClientMenu implements MenuCommand {
     public void executeCommand() {
 
         Response< Boolean> response = service.delete(service.createClient());
-        if (response.equals("Ok")) {
+        if (response.getMessage().equals("Ok")) {
             System.out.println(response.getData());
         } else {
             System.out.println(response.getMessage());

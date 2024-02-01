@@ -21,7 +21,7 @@ public class FindByIdClientMenu implements MenuCommand {
         int idSearch = userInput.uiInt("Please enter client id: ");
 
        Response<Client> response = service.findById(idSearch);
-        if (response.equals("Ok")) {
+        if (response.getMessage().equals("Ok")) {
             System.out.println(response.getData());
         } else {
             System.out.println(response.getMessage());

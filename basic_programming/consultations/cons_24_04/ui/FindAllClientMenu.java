@@ -18,7 +18,7 @@ public class FindAllClientMenu implements MenuCommand {
     public void executeCommand() {
 
         Response<List<Client>> response = service.findAll();
-        if (response.equals("Ok")) {
+        if (response.getMessage().equals("Ok")) {
             System.out.println(response.getData());
         } else {
             System.out.println(response.getMessage());
@@ -28,7 +28,7 @@ public class FindAllClientMenu implements MenuCommand {
 
     @Override
     public String getMenuName() {
-        return "Find all products";
+        return "Find all clients";
     }
 
     @Override

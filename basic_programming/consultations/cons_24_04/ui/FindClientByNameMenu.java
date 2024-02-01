@@ -22,7 +22,7 @@ public class FindClientByNameMenu implements MenuCommand {
         String nameSearch = userInput.uiText("Please enter client name: ");
 
         Response<Client> response = service.findByName(nameSearch);
-        if (response.equals("Ok")) {
+        if (response.getMessage().equals("Ok")) {
             System.out.println(response.getData());
         } else {
             System.out.println(response.getMessage());
