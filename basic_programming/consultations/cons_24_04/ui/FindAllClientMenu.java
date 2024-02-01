@@ -2,35 +2,36 @@ package ui;
 
 import dto.Response;
 import entity.Client;
-import lotto.service.UserInput;
 import service.ClientService;
+import shoppinglist.dto.ResponseForClientFindAllProducts;
 import shoppinglist.service.ProductService;
+import shoppinglist.ui.MenuCommand;
 
-public class FindByIdClientMenu implements MenuCommand {
+import java.util.List;
+
+public class FindAllClientMenu implements MenuCommand {
 
     private final ClientService service;
 
-    public FindByIdClientMenu(ClientService service) {
+    public FindAllClientMenu(ClientService service) {
         this.service = service;
     }
 
     @Override
     public void executeCommand() {
 
-        UserInput userInput = new UserInput();
-        int idSearch = userInput.uiInt("Please enter client id: ");
-
-       Response<Client> response = service.findById(idSearch);
+        Response<List<Client>> response = service.findAll();
         if (response.equals("Ok")) {
             System.out.println(response.getData());
         } else {
             System.out.println(response.getMessage());
         }
+
     }
 
     @Override
     public String getMenuName() {
-        return "Find client by ID";
+        return "Find all products";
     }
 
     @Override

@@ -1,5 +1,7 @@
 package ui;
 
+import dto.Response;
+import entity.Client;
 import lotto.service.UserInput;
 import service.ClientService;
 import shoppinglist.dto.ResponseForClientFindAllProducts;
@@ -19,8 +21,12 @@ public class FindClientByNameMenu implements MenuCommand {
         UserInput userInput = new UserInput();
         String nameSearch = userInput.uiText("Please enter client name: ");
 
-        service.findByName(nameSearch);
-
+        Response<Client> response = service.findByName(nameSearch);
+        if (response.equals("Ok")) {
+            System.out.println(response.getData());
+        } else {
+            System.out.println(response.getMessage());
+        }
     }
 
     @Override

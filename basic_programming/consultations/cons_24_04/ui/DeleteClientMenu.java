@@ -1,5 +1,7 @@
 package ui;
 
+import dto.Response;
+import entity.Client;
 import service.ClientService;
 import shoppinglist.dto.ResponseForClientForDelete;
 import shoppinglist.service.ProductService;
@@ -16,7 +18,12 @@ public class DeleteClientMenu implements MenuCommand {
     @Override
     public void executeCommand() {
 
-        service.delete(service.createClient());
+        Response< Boolean> response = service.delete(service.createClient());
+        if (response.equals("Ok")) {
+            System.out.println(response.getData());
+        } else {
+            System.out.println(response.getMessage());
+        }
     }
 
     @Override

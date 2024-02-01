@@ -6,6 +6,7 @@ import entity.Client;
 import lotto.service.UserInput;
 import repository.ClientDatabase;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.function.Supplier;
 
@@ -71,5 +72,16 @@ public class ClientService {
         }
     };
 
+
+    public Response<List<Client>> findAll(){
+
+        List<Client> findAllList = database.findAll();
+
+        if (findAllList.isEmpty()) {
+            return new Response<>(findAllList, "Database is empty");
+        } else {
+            return new Response<>(findAllList, "Ok");
+        }
+    }
 
 }

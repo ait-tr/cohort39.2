@@ -3,6 +3,7 @@ package repository;
 import entity.Client;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.function.Predicate;
 
@@ -79,5 +80,10 @@ public class ClientDatabase implements ClientRepository{
     public boolean delete(Client clientForDelete) {
         boolean deleteResult = database.remove(clientForDelete);
         return deleteResult;
+    }
+
+    @Override
+    public List<Client> findAll() {
+        return database;
     }
 }

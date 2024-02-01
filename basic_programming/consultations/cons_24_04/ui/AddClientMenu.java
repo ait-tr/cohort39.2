@@ -1,5 +1,6 @@
 package ui;
 
+import dto.Response;
 import entity.Client;
 import service.ClientService;
 import shoppinglist.dto.ProductDto;
@@ -18,8 +19,12 @@ public class AddClientMenu implements MenuCommand {
     @Override
     public void executeCommand() {
 
-        service.add(service.createClient());
-
+        Response<Client> response = service.add(service.createClient());
+        if (response.equals("Ok")) {
+            System.out.println(response.getData());
+        } else {
+            System.out.println(response.getMessage());
+        }
     }
 
     @Override
