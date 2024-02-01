@@ -66,7 +66,7 @@ public class ClientService {
         if (updateResult) {
             return new Response<>(true, "Ok");
         } else {
-            return new Response<>(false, "Update unsuccessful");
+            return new Response<>(false, "Delete unsuccessful");
         }
     };
 
