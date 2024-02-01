@@ -11,8 +11,8 @@ public class ClientDatabase implements ClientRepository{
    private final ArrayList<Client> database;
    private int id = 0;
 
-    public ClientDatabase(ArrayList<Client> database) {
-        this.database = database;
+    public ClientDatabase() {
+        this.database = new ArrayList<>();
     }
 
     @Override
