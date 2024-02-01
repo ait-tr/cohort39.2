@@ -61,9 +61,12 @@ public class ClientService {
         }
     };
 
-    public Response<Boolean> delete(Client client){
-        boolean updateResult = database.delete(client);
-        if (updateResult) {
+    public Response<Boolean> delete(int idForDelete){
+        Optional<Client> clientOptional = database.findById(idForDelete);
+        Client clientForDelete = clientOptional.get();
+        boolean deleteResult = database.delete(clientForDelete);
+
+        if (deleteResult) {
             return new Response<>(true, "Ok");
         } else {
             return new Response<>(false, "Delete unsuccessful");

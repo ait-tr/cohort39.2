@@ -2,10 +2,10 @@ package ui;
 
 import dto.Response;
 import entity.Client;
+import lotto.service.UserInput;
 import service.ClientService;
 import shoppinglist.dto.ResponseForClientForDelete;
 import shoppinglist.service.ProductService;
-import shoppinglist.service.util.UserInput;
 
 public class DeleteClientMenu implements MenuCommand {
 
@@ -18,7 +18,11 @@ public class DeleteClientMenu implements MenuCommand {
     @Override
     public void executeCommand() {
 
-        Response< Boolean> response = service.delete(service.createClient());
+        lotto.service.UserInput userInput = new UserInput();
+        int idSearch = userInput.uiInt("Please enter client id: ");
+
+
+        Response< Boolean> response = service.delete(idSearch);
         if (response.getMessage().equals("Ok")) {
             System.out.println(response.getData());
         } else {
