@@ -3,9 +3,6 @@ package ui;
 import dto.Response;
 import entity.Client;
 import service.ClientService;
-import shoppinglist.dto.ResponseForClientFindAllProducts;
-import shoppinglist.service.ProductService;
-import shoppinglist.ui.MenuCommand;
 
 import java.util.List;
 

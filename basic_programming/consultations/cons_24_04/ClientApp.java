@@ -11,6 +11,7 @@ public class ClientApp {
         ClientService service = new ClientService(database);
 
         AddClientMenu addClientMenu = new AddClientMenu(service);
+        FindAllClientMenu findAllClientMenu = new FindAllClientMenu(service);
         FindByIdClientMenu findByIdClientMenu = new FindByIdClientMenu(service);
         FindClientByNameMenu findClientByNameMenu = new FindClientByNameMenu(service);
         DeleteClientMenu deleteClientMenu = new DeleteClientMenu(service);
@@ -18,6 +19,7 @@ public class ClientApp {
 
         List<MenuCommand> menuCommands = new ArrayList<>();
         menuCommands.add(addClientMenu);
+        menuCommands.add(findAllClientMenu);
         menuCommands.add(findByIdClientMenu);
         menuCommands.add(findClientByNameMenu);
         menuCommands.add(deleteClientMenu);
