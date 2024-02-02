@@ -2,6 +2,7 @@ package stream;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Stream3 {
@@ -75,8 +76,6 @@ public class Stream3 {
                 .map(x -> Integer.parseInt(x) * 25)
                 .toList();
         System.out.println(result7);
-
-
 
     }
 }
