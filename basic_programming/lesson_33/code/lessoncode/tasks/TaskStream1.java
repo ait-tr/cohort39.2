@@ -21,8 +21,8 @@ public class TaskStream1 {
                 new FootBallTeam("Wuppertal", 3),
                 new FootBallTeam("Duisburg", 5),
                 new FootBallTeam("Bonn", 6),
-                new FootBallTeam("Essen", 3),
-                new FootBallTeam("Essen", 3)
+                new FootBallTeam("Essen 3", 3),
+                new FootBallTeam("Essen 2", 3)
         );
 
         Comparator<FootBallTeam> powerComparator = new Comparator<FootBallTeam>() {
@@ -41,7 +41,7 @@ public class TaskStream1 {
 
 
         List<FootBallTeam> essenTeams = list_1.stream()
-                .filter(team -> team.getName().equals("Essen"))
+                .filter(team -> team.getName().contains("Essen"))
                 .toList();
 
         System.out.println(essenTeams);
