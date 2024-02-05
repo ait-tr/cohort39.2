@@ -1,5 +1,10 @@
 package studetnAndBook;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 public class Example5 {
     /*
 Студент записывает книги которые прочитал,
@@ -17,7 +22,18 @@ public class Example5 {
         student2.addBook("HTML introducing");
         student2.addBook("Effective Java");
 
+        List<Student> list = new ArrayList<>();
+        list.add(student1);
+        list.add(student2);
 
+        Set<String> strings = list.stream()
+                .map(student -> student.getBook())
+                .flatMap(x -> x.stream())
+                .collect(Collectors.toSet());
+
+        Set<String> noHtmlBooks = strings.stream()
+                .filter(book -> !book.contains("HTML"))
+                .collect(Collectors.toSet());
 
 
     }
