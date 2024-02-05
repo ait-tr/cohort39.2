@@ -36,5 +36,8 @@ public class Example5 {
                 .collect(Collectors.toSet());
 
 
+        System.out.println(strings);
+        System.out.println(noHtmlBooks);
+
     }
 }
