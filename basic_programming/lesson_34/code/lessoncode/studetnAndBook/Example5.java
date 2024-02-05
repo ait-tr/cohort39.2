@@ -4,7 +4,7 @@ public class Example5 {
     /*
 Студент записывает книги которые прочитал,
 задача вывести все прочитанные книги у всех студентов
-(в качестве дополнения, применить фильтр на любую тему)
+(в качестве дополнения, применить фильтр на тему: найти книги которые не содержат HTML)
  */
 
     public static void main(String[] args) {
@@ -14,8 +14,8 @@ public class Example5 {
         student1.addBook("Effective Java");
 
         Student student2 = new Student("Thomas");
-        student1.addBook("HTML introducing");
-        student1.addBook("Effective Java");
+        student2.addBook("HTML introducing");
+        student2.addBook("Effective Java");
 
 
 
