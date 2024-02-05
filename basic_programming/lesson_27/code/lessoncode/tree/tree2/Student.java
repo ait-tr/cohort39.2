@@ -19,7 +19,7 @@ public class Student implements Comparable<Student>{
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "studetnAndBook.Student{" +
                 "age=" + age +
                 ", name='" + name + '\'' +
                 '}';

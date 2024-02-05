@@ -12,7 +12,7 @@ If it can't find a match, the default block will be executed instead:
 
 switch (yearsOfJavaExperience) {
     case 0:
-        System.out.println("Student");
+        System.out.println("studetnAndBook.Student");
         break;
     case 1:
         System.out.println("Junior");

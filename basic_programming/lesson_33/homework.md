@@ -1,7 +1,7 @@
 ## Домашнее задание 
 
 1) Фильтрация списка студентов по возрасту и со средним баллом больше 4.5
-   Student {
+   studetnAndBook.Student {
    String name;
    int age;
    double avgGrade;
