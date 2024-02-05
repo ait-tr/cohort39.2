@@ -8,5 +8,9 @@ public class LibraryApp {
         LibraryUtil util = new LibraryUtil();
 
         util.printBooks(util.doWithLambda(library.getBooks()));
+
+        System.out.println("=============");
+
+        util.printBooks(library.getBooks());
     }
 }
