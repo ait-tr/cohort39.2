@@ -12,7 +12,7 @@ public class UserSave {
         User user = service.createUser();
 
         String fileName = "basic_programming/lesson_36/code/lessoncode/resources/UserData_" + user.getId() + ".txt";
-        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
+        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName)); // new FileWriter(fileName,true) - для добавления к существующему файлу, иначе - перезапись файла
 
         writer.write("ID: " + user.getId() + "\n");
         writer.write("Name: " + user.getName() + "\n");
