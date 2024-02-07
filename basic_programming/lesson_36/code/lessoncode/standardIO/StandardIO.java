@@ -1,3 +1,5 @@
+package standardIO;
+
 import java.util.Scanner;
 
 public class StandardIO {
