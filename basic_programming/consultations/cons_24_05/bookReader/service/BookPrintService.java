@@ -9,6 +9,8 @@ public class BookPrintService {
 
 
     public void printFindResult(Optional<Book> foundBook, String searchTitle) {
+        System.out.println("Сервис поиска книги");
+        System.out.println("-------------------");
         if (foundBook.isPresent()) {
             System.out.println("Найденная книга: " + foundBook.get());
         } else {

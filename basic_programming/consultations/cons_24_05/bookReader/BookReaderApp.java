@@ -17,7 +17,7 @@ public class BookReaderApp {
         BookRepository repository = new BookRepository();
         BookPrintService printService = new BookPrintService();
 
-        String filePath = "basic_programming/consultations/cons_24_05/bookReader/books.txt"; // Укажите актуальный путь к файлу
+        String filePath = "basic_programming/consultations/cons_24_05/bookReader/resources/books.txt"; // Укажите актуальный путь к файлу
         List<Book> books = new ArrayList<>();
 
         createService.processBooks(filePath, books);
@@ -29,6 +29,8 @@ public class BookReaderApp {
         String searchTitle = "Преступление и наказание";
 
         Optional<Book> foundBook = repository.findBook(books, searchTitle);
+
+        System.out.println();
 
         printService.printFindResult(foundBook, searchTitle);
     }
