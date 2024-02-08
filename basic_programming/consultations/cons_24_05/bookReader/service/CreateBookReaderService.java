@@ -1,12 +1,16 @@
-package bookReader;
+package bookReader.service;
+
+import bookReader.entity.Book;
+import bookReader.repository.BookRepository;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
-import java.util.Optional;
 
 public class CreateBookReaderService {
+
+    BookRepository repository = new BookRepository();
 
     public void processBooks(String filePath, List<Book> books) throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
@@ -16,34 +20,33 @@ public class CreateBookReaderService {
                 if (line.contains("{") && line.contains("}")) {
                     // Однострочный формат
                     Book newBook = parseSingleLineBook(line);
-                    addBook(books,newBook);
+                    repository.addBook(books,newBook);
 
                 } else if (line.contains("{")) {
                     // Многострочный формат, считываем и обрабатываем как ранее
                     Book newBook = parseMultiLineBook(reader,line);
-                    addBook(books,newBook);
+                    repository.addBook(books,newBook);
                 }
             }
         }
     }
 
     private Book parseSingleLineBook(String bookData) {
+        // Удаление фигурных скобок из строки
+        bookData = bookData.replace("{", "").replace("}", "").trim();
 
-            int titleStart = bookData.indexOf("\"") + 1;
-            int titleEnd = bookData.indexOf("\"", titleStart);
-            String title = bookData.substring(titleStart, titleEnd);
+        // Разделение строки на части по запятым
+        String[] parts = bookData.split(",\\s*");
+        // Предполагаем, что порядок частей всегда одинаков: Название, Автор, Год издания
 
-            int authorStart = bookData.indexOf("\"", titleEnd + 1) + 1;
-            int authorEnd = bookData.indexOf("\"", authorStart);
-            String author = bookData.substring(authorStart, authorEnd);
+        String title = parts[0].split(":")[1].trim().replace("\"", "");
+        String author = parts[1].split(":")[1].trim().replace("\"", "");
+        int year = Integer.parseInt(parts[2].split(":")[1].trim());
 
-            int yearStart = bookData.lastIndexOf(":") + 1;
-            int yearEnd = bookData.indexOf("}", yearStart);
-            int year = Integer.parseInt(bookData.substring(yearStart, yearEnd).trim());
-
-            return new Book(title, author, year);
-
+        return new Book(title, author, year);
     }
+
+
 
     Book parseMultiLineBook(BufferedReader reader, String line) throws IOException {
 
@@ -61,21 +64,4 @@ public class CreateBookReaderService {
         return value.replace("\"", "").trim();
     }
 
-    void addBook(List<Book> books, Book book) {
-        if (book.getBookName() == null || book.getBookName().isBlank()) {
-            System.out.println("Книга не добавлена: отсутствует название.");
-            return;
-        }
-        if (book.getAuthor() == null || book.getAuthor().isBlank()) {
-            System.out.println("Книга не добавлена: отсутствует автор.");
-            return;
-        }
-        if (book.getYear() <= 1800) {
-            System.out.println("Книга не добавлена: неверный год издания.");
-            return;
-        }
-        books.add(book);
-        System.out.println("Книга успешно добавлена: " + book);
-
-    }
 }

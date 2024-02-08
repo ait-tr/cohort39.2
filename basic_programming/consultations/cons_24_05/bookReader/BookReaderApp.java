@@ -1,18 +1,21 @@
 package bookReader;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import bookReader.entity.Book;
+import bookReader.repository.BookRepository;
+import bookReader.service.BookPrintService;
+import bookReader.service.CreateBookReaderService;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class BookReader {
+public class BookReaderApp {
     public static void main(String[] args) throws IOException {
 
         CreateBookReaderService createService = new CreateBookReaderService();
-        BookFindService findService = new BookFindService();
+        BookRepository repository = new BookRepository();
+        BookPrintService printService = new BookPrintService();
 
         String filePath = "basic_programming/consultations/cons_24_05/bookReader/books.txt"; // Укажите актуальный путь к файлу
         List<Book> books = new ArrayList<>();
@@ -25,9 +28,9 @@ public class BookReader {
 
         String searchTitle = "Преступление и наказание";
 
-        Optional<Book> foundBook = findService.findBook(books, searchTitle);
+        Optional<Book> foundBook = repository.findBook(books, searchTitle);
 
-        findService.printFindResult(foundBook, searchTitle);
+        printService.printFindResult(foundBook, searchTitle);
     }
 
 
