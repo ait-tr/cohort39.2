@@ -28,7 +28,7 @@ public class CreateBookReaderService {
     }
 
     private Book parseSingleLineBook(String bookData) {
-        try {
+
             int titleStart = bookData.indexOf("\"") + 1;
             int titleEnd = bookData.indexOf("\"", titleStart);
             String title = bookData.substring(titleStart, titleEnd);
@@ -42,10 +42,7 @@ public class CreateBookReaderService {
             int year = Integer.parseInt(bookData.substring(yearStart, yearEnd).trim());
 
             return new Book(title, author, year);
-        } catch (Exception e) {
-            System.out.println("Ошибка при разборе строки: " + e.getMessage());
-            return null;
-        }
+
     }
 
     Book parseMultiLineBook(BufferedReader reader, String line) throws IOException {
@@ -65,7 +62,6 @@ public class CreateBookReaderService {
     }
 
     void addBook(List<Book> books, Book book) {
-        // Предполагаем, что book не может быть null; проверяем поля book на пустоту
         if (book.getBookName() == null || book.getBookName().isBlank()) {
             System.out.println("Книга не добавлена: отсутствует название.");
             return;
@@ -74,7 +70,7 @@ public class CreateBookReaderService {
             System.out.println("Книга не добавлена: отсутствует автор.");
             return;
         }
-        if (book.getYear() <= 0) {
+        if (book.getYear() <= 1800) {
             System.out.println("Книга не добавлена: неверный год издания.");
             return;
         }
