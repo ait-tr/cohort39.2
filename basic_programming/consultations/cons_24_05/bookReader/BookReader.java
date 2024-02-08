@@ -18,7 +18,7 @@ public class BookReader {
 
        BufferedReader reader = new BufferedReader(new FileReader(filePath));
             while (reader.ready()) {
-                service.createBook(reader, books);
+                service.addBook(books,service.createBook(reader, books));
             }
 
         String searchTitle = "Преступление и наказание";
