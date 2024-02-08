@@ -33,7 +33,7 @@ public class BookReaderService {
 
     void printFindResult(Optional<Book> foundBook, String searchTitle) {
         if (foundBook.isPresent()) {
-            System.out.println("Найденная книга: " + foundBook);
+            System.out.println("Найденная книга: " + foundBook.get());
         } else {
             System.out.println("Книга с названием \"" + searchTitle + "\" не найдена.");
         }
