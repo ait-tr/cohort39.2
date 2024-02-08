@@ -17,8 +17,7 @@ public class BookReaderApp {
         BookRepository repository = new BookRepository();
         BookPrintService printService = new BookPrintService();
 
-        String filePath = "basic_programming/consultations/cons_24_05/bookReader/resources/books.txt"; // Укажите актуальный путь к файлу
-        List<Book> books = new ArrayList<>();
+        String filePath = "basic_programming/consultations/cons_24_05/bookReader/resources/books.txt";    List<Book> books = new ArrayList<>();
 
         createService.processBooks(filePath, books);
 
