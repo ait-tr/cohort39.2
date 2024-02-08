@@ -17,8 +17,22 @@ public class BookReaderService {
     }
 
     void addBook(List<Book> books, Book book)  {
+            // Предполагаем, что book не может быть null; проверяем поля book на пустоту
+            if (book.getBookName() == null || book.getBookName().isBlank()) {
+                System.out.println("Книга не добавлена: отсутствует название.");
+                return;
+            }
+            if (book.getAuthor() == null || book.getAuthor().isBlank()) {
+                System.out.println("Книга не добавлена: отсутствует автор.");
+                return;
+            }
+            if (book.getYear() <= 0) {
+                System.out.println("Книга не добавлена: неверный год издания.");
+                return;
+            }
+            books.add(book);
+            System.out.println("Книга успешно добавлена: " + book);
 
-        books.add(book);
     }
 
     private String extractValue(String line) {
