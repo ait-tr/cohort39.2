@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class BookReader {
     public static void main(String[] args) {
@@ -21,16 +22,22 @@ public class BookReader {
 
         // Поиск книги
         String searchTitle = "Преступление и наказание";
-        Book foundBook = books.stream()
-                .filter(book -> book.getBookName().equalsIgnoreCase(searchTitle))
-                .findFirst()
-                .orElse(null);
 
-        if (foundBook != null) {
+        Optional<Book> foundBook = findBook(books, searchTitle);
+
+        if (foundBook.isPresent()) {
             System.out.println("Найденная книга: " + foundBook);
         } else {
             System.out.println("Книга с названием \"" + searchTitle + "\" не найдена.");
         }
+    }
+
+    private static Optional<Book> findBook(List<Book> books, String searchTitle) {
+        Book foundBook = books.stream()
+                .filter(book -> book.getBookName().equalsIgnoreCase(searchTitle))
+                .findFirst()
+                .orElse(null);
+        return Optional.ofNullable(foundBook);
     }
 
     private static void createBook(BufferedReader reader, List<Book> books) throws IOException {
