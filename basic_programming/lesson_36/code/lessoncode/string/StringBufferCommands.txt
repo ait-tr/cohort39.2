@@ -1,0 +1,8 @@
+
+delete(int start, int end) - удаляет подстроку
+deleteCharAt(int index) - удаление символа по индексу
+insert(int indexOffset, String strForAdd) - вставляет строку strForAdd с индекса indexOffset
+replace(int start, int end, String str) - заменяет символы с start до end на str
+reverse() - меняет порядок всех символов на противоположный
+substring - возврат подстроки
+
