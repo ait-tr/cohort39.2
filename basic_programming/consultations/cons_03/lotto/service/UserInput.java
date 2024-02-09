@@ -17,4 +17,11 @@ public class UserInput {
         return scanner.nextInt();
 
     }
+
+    public Double uiDouble(String message){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(message);
+        return scanner.nextDouble();
+
+    }
 }

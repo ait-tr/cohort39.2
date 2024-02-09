@@ -2,19 +2,17 @@ package userException;
 
 public class ProductService {
 
-    ValidationService validationService;
+    ValidationServiceWithException validationService;
 
-    public ProductService(ValidationService validationService) {
+    public ProductService(ValidationServiceWithException validationService) {
         this.validationService = validationService;
     }
 
     public void add(Product product){
-        String validationResult = validationService.validate(product);
-        if (validationResult.equals("OK")) {
+        validationService.validate(product);
+
         System.out.println("Success add new product");
-        } else {
-            System.out.println(validationResult);
-        }
+
 
     }
 

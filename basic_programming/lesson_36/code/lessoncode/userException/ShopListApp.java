@@ -1,23 +1,36 @@
 package userException;
 
-import java.util.Scanner;
+import lotto.service.UserInput;
+
+import java.util.InputMismatchException;
+
 
 public class ShopListApp {
     public static void main(String[] args) {
 
-        ValidationService validationService = new ValidationService();
+        ValidationServiceWithException validationService = new ValidationServiceWithException();
         ProductService service = new ProductService(validationService);
+        UserInput ui = new UserInput();
 
-        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            try {
 
-        System.out.println("Enter product name: ");
-        String name = scanner.nextLine();
+                String name = ui.uiText("Enter product name: ");
+                Double price = ui.uiDouble("Enter product price: ");
 
-        System.out.println("Enter product price: ");
-        Double price = scanner.nextDouble();
-
-        Product product = new Product(name, price);
-        service.add(product);
+                Product product = new Product(name, price);
+                service.add(product);
+            } catch (NumberFormatException e) {
+                System.out.println("Incorrect number entered");
+            } catch (InputMismatchException e){
+                System.out.println("Incorrect input type entered");
+            } catch (ProductValidationException e) {
+                System.out.println("Validation failed");
+                System.out.println(e.getMessage());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
 
     }
 }
