@@ -1,5 +1,8 @@
 package userException;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ValidationServiceWithException {
 
     /*
@@ -11,24 +14,34 @@ public class ValidationServiceWithException {
      */
 
     public void validate(Product product){
+
+        List<String> errors = new ArrayList<>();
+
         if (product.getName() == null) {
-            throw new ProductValidationException("Product name is null");
+            errors.add("Product name is null");
         }
 
         if (product.getName().equals("")) {
-            throw new ProductValidationException( "Product name is empty");
+            errors.add( "Product name is empty");
         }
 
         if (product.getName().length() < 3) {
-            throw new ProductValidationException( "Product name length less than 3");
+            errors.add( "Product name length less than 3");
         }
 
         if (product.getPrice() == null) {
-            throw new ProductValidationException( "Product price is null");
+            errors.add( "Product price is null");
         }
 
         if (product.getPrice() <= 0) {
-            throw new ProductValidationException( "Product price less than 0");
+            errors.add( "Product price less than 0");
+        }
+
+        if (!errors.isEmpty()) {
+            String errorMessage = errors.stream()
+                    .reduce((finalMessage, currentMessage) -> (finalMessage + "\n" + currentMessage))
+                    .get();
+            throw new ProductValidationException(errorMessage);
         }
 
     }
