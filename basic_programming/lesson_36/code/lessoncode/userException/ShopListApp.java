@@ -14,7 +14,6 @@ public class ShopListApp {
 
         while (true) {
             try {
-
                 String name = ui.uiText("Enter product name: ");
                 Double price = ui.uiDouble("Enter product price: ");
 
@@ -29,6 +28,8 @@ public class ShopListApp {
                 System.out.println(e.getMessage());
             } catch (Exception e) {
                 e.printStackTrace();
+            } finally {
+                System.out.println("Finally block!");
             }
         }
 
