@@ -95,7 +95,7 @@ public class Matches {
 //
         Map<Integer, Long> dayOfWeekSorted = dayOfWeek.entrySet().stream()
                 .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
-                .limit(1)
+                .limit(3)
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1,e2) -> e1, LinkedHashMap::new));
 
         for (Map.Entry<Integer,Long> entry : dayOfWeekSorted.entrySet()){
