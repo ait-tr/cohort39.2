@@ -1,0 +1,23 @@
+Основные методы класса LocalDateTime:
+
+    now() - статический метод, возвращающий текущую дату-время согласно системным часам и временной зоне по умолчанию.
+
+    of(int year, int month, int dayOfMonth, int hour, int minute) - статический метод, позволяющий создать экземпляр LocalDateTime с указанными годом, месяцем, днём, часом и минутами.
+
+    of(int year, Month month, int dayOfMonth, int hour, int minute, int second) - аналогичен предыдущему, но также позволяет указать секунды.
+
+    parse(CharSequence text) - статический метод, который анализирует текстовое представление даты-времени и возвращает LocalDateTime.
+
+    plusDays(long days) - возвращает копию объекта LocalDateTime с добавленным указанным количеством дней.
+
+    minusHours(long hours) - возвращает копию объекта LocalDateTime с вычитаемым указанным количеством часов.
+
+    withYear(int year) - возвращает копию объекта LocalDateTime, в котором год изменён на указанный.
+
+    getDayOfMonth() - возвращает день месяца, представленный этим LocalDateTime.
+
+    getMonth() - возвращает месяц текущего объекта LocalDateTime.
+
+    getYear() - возвращает год текущего объекта LocalDateTime.
+
+    atZone(ZoneId zone) - преобразует LocalDateTime в ZonedDateTime с указанным часовым поясом.
