@@ -5,6 +5,7 @@ import appV2.dto.ClientResponse;
 import appV2.entity.Task;
 import appV2.repository.InMemoryRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,16 +25,22 @@ public class TaskServiceFind {
         }
     }
 
-    public ClientResponse<Task> findBy(ClientRequestFind requestFind){
+    public ClientResponse<List<Task>> findBy(ClientRequestFind requestFind){
+
+        List<Task> foundedTasks = new ArrayList<>();
+
         if (requestFind.getId() > 0) {
-            return findById(requestFind);
+            foundedTasks.add(findById(requestFind).getResponseInfo());
         }
 
-        if (requestFind.getName().length() > 0) {
-            return findByName(requestFind);
+        if (!requestFind.getName().isEmpty()) {
+            foundedTasks.add(findByName(requestFind).getResponseInfo());
         }
 
-        return new ClientResponse<>(400, new Task(), "Поля для поиска незаполненны");
+        if (!foundedTasks.isEmpty()) {
+            return new ClientResponse<>(200, foundedTasks, "Найденные элементы");
+        }
+        return new ClientResponse<>(400, new ArrayList<>(), "Поля для поиска незаполненны");
 
     }
 

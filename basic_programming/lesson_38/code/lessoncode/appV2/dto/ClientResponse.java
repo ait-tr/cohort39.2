@@ -18,6 +18,10 @@ public class ClientResponse <T> {
         this.message = message;
     }
 
+    public T getResponseInfo() {
+        return responseInfo;
+    }
+
     @Override
     public String toString() {
         return "ClientResponse{" +
