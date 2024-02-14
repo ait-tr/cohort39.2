@@ -1,5 +1,61 @@
 package appV2.service;
 
-public class TaskServiceFind {
+import appV2.dto.ClientRequestFind;
+import appV2.dto.ClientResponse;
+import appV2.entity.Task;
+import appV2.repository.InMemoryRepository;
 
+import java.util.List;
+import java.util.Optional;
+
+public class TaskServiceFind {
+    private final InMemoryRepository repository;
+
+    public TaskServiceFind(InMemoryRepository repository) {
+        this.repository = repository;
+    }
+
+    public ClientResponse<List<Task>> findAll(){
+        List<Task> tasks = repository.findAll();
+        if (!tasks.isEmpty()) {
+            return new ClientResponse<>(200,tasks,"Список задач");
+        } else {
+            return new ClientResponse<>(250,tasks, "База данных пуста!");
+        }
+    }
+
+    public ClientResponse<Task> findBy(ClientRequestFind requestFind){
+        if (requestFind.getId() > 0) {
+            return findById(requestFind);
+        }
+
+        if (requestFind.getName().length() > 0) {
+            return findByName(requestFind);
+        }
+
+        return new ClientResponse<>(400, new Task(), "Поля для поиска незаполненны");
+
+    }
+
+    private ClientResponse<Task> findById(ClientRequestFind requestFind){
+
+            Optional<Task> foundTaskOpt = repository.findById(requestFind.getId());
+
+            if (foundTaskOpt.isPresent()) {
+                return new ClientResponse<>(200, foundTaskOpt.get(), "Найден элемент с id = " + requestFind.getId());
+            } else {
+                return new ClientResponse<>(400, new Task(), "Элемент не найден  ");
+            }
+    }
+
+    private ClientResponse<Task> findByName(ClientRequestFind requestFind){
+
+        Optional<Task> foundTaskOpt = repository.findByTaskName(requestFind.getName());
+
+        if (foundTaskOpt.isPresent()) {
+            return new ClientResponse<>(200, foundTaskOpt.get(), "Найден элемент с Name = " + requestFind.getName());
+        } else {
+            return new ClientResponse<>(400, new Task(), "Элемент не найден  ");
+        }
+    }
 }
