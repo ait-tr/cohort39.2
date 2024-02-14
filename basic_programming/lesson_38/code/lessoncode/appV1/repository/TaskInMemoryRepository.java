@@ -1,6 +1,6 @@
-package repository;
+package appV1.repository;
 
-import entity.Task;
+import appV1.entity.Task;
 
 import java.util.HashMap;
 import java.util.Map;

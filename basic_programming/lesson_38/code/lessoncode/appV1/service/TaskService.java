@@ -1,7 +1,7 @@
-package service;
+package appV1.service;
 
-import entity.Task;
-import repository.TaskInMemoryRepository;
+import appV1.entity.Task;
+import appV1.repository.TaskInMemoryRepository;
 
 import java.util.Map;
 import java.util.Optional;

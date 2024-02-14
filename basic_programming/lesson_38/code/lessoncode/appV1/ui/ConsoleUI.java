@@ -1,8 +1,8 @@
-package ui;
+package appV1.ui;
 
-import entity.Task;
+import appV1.entity.Task;
 import lotto.service.UserInput;
-import service.TaskService;
+import appV1.service.TaskService;
 
 import java.util.Scanner;
 

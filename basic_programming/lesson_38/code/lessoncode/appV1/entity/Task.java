@@ -1,4 +1,4 @@
-package entity;
+package appV1.entity;
 
 public class Task {
     private Long id;
