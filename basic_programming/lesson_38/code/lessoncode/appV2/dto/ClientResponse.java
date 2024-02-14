@@ -17,6 +17,15 @@ public class ClientResponse <T> {
         this.responseInfo = responseInfo;
         this.message = message;
     }
+
+    @Override
+    public String toString() {
+        return "ClientResponse{" +
+                "responseCode=" + responseCode +
+                ", responseInfo=" + responseInfo +
+                ", message='" + message + '\'' +
+                '}';
+    }
 }
 
 
