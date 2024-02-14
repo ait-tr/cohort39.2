@@ -12,7 +12,7 @@ public class TaskInMemoryRepository {
     private Map<Long, Task> tasks = new HashMap<>();
 
     public Task insert(Task newTask){
-        newTask.setId(taskId++);
+        newTask.setId(++taskId);
         tasks.put(taskId, newTask);
         return newTask;
     }
@@ -24,7 +24,7 @@ public class TaskInMemoryRepository {
     public Optional<Task> findByTaskName(String taskName) {
         for (Map.Entry<Long, Task> entry : tasks.entrySet()) {
             if (entry.getValue().getName().equals(taskName)) {
-                return Optional.of((Task) entry);
+                return Optional.of(entry.getValue());
             }
         }
 

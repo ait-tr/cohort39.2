@@ -52,6 +52,7 @@ public class ConsoleUI {
                 }
             } catch (Exception e){
                 System.out.println("Error! Please try again!");
+                e.printStackTrace();
             }
         }
     }
@@ -76,8 +77,6 @@ public class ConsoleUI {
         Task findedTask = taskService.findTaskByName(taskName);
         return findedTask;
     }
-
-
 
 
 }
