@@ -1,3 +1,5 @@
+package entity;
+
 public abstract class LibraryItem {
     private String title;
     private String author;
@@ -23,7 +25,7 @@ public abstract class LibraryItem {
 
     @Override
     public String toString() {
-        return "LibraryItem{" +
+        return "entity.LibraryItem{" +
                 "title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", year=" + year +

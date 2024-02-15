@@ -21,12 +21,12 @@ public class InputData {
     public Book inputNewBook(){
         countAuthor++;
        countOfBook++;
-       String nameOfBook = "Book name " + countOfBook;
+       String nameOfBook = "entity.Book name " + countOfBook;
         Author author = new Author(countAuthor, "Author " + countAuthor);
         return new Book(countOfBook, author, nameOfBook);
     }
 
     public String inputSearchCriteria() {
-        return "Book # 12";
+        return "entity.Book # 12";
     }
 }

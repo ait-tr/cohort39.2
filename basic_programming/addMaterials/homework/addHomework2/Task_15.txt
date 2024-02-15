@@ -6,7 +6,7 @@ class Phone {
 
     String model;{
 
-    Book(String newModel) {
+    entity.Book(String newModel) {
         this.model = newModel;
     }
 

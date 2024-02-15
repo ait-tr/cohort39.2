@@ -20,7 +20,7 @@ public class Book implements Comparable<Book>{
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "entity.Book{" +
                 "id=" + id +
                 ", bookName='" + bookName + '\'' +
                 '}';

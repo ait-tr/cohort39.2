@@ -2,7 +2,7 @@ package libraryApp.entity;
 
 public enum ResponseStatus {
     OK("Ok"),
-    BOOK_NOT_FOUND("Book not found");
+    BOOK_NOT_FOUND("entity.Book not found");
 
     private final String message;
 

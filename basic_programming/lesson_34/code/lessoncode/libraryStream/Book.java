@@ -40,7 +40,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "entity.Book{" +
                 "author='" + author + '\'' +
                 ", name='" + name + '\'' +
                 ", issueYear=" + issueYear +

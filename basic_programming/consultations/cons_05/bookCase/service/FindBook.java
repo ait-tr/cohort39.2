@@ -26,10 +26,10 @@ public class FindBook {
     // а вот КАК ИМЕННО надо осуществлять поиск и по каким параметрам сравнивать это уже прописано в самом классе
     // ссылка на который передается
 
-//    private Book findBy(String searchCriteria, Bookcase bookcase, FindBy findBySearchCriteria) {
+//    private entity.Book findBy(String searchCriteria, Bookcase bookcase, FindBy findBySearchCriteria) {
 //        Bookshelf[] bookshelves = bookcase.getBookShelves();
 //        for (int i = 0; i < bookshelves.length; i++) {
-//            Book[] books = bookshelves[i].getBooksOnShelf();
+//            entity.Book[] books = bookshelves[i].getBooksOnShelf();
 //            for (int j = 0; j < books.length; j++) {
 //                if (findBySearchCriteria.find(books[j], searchCriteria)) {
 //                    return books[j];

@@ -28,7 +28,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "entity.Book{" +
                 "bookId=" + bookId +
                 ", author=" + author +
                 ", nameOfBook='" + nameOfBook + '\'' +

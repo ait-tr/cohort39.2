@@ -42,7 +42,7 @@ public class LibraryOperations {
 
 
 //            String searchBookCriteria = "";//inputData.inputSearchCriteria();
-//            List<Book> foundedBooks = services.searchBookByBookName(ourLibrary,searchBookCriteria);
+//            List<entity.Book> foundedBooks = services.searchBookByBookName(ourLibrary,searchBookCriteria);
 //            outputData.printOurLibrary("Книги удовлетворяющие условию поиска: ",foundedBooks);
 //            services.deleteBook(ourLibrary,foundedBooks);
 //            outputData.printOurLibrary("Our library after delete books", ourLibrary);

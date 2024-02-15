@@ -1,3 +1,5 @@
+package entity;
+
 public class Book extends LibraryItem implements Describable{
 
     private String geanre;
@@ -13,6 +15,6 @@ public class Book extends LibraryItem implements Describable{
 
     @Override
     public String getDescribe() {
-        return "Book with geanre" + geanre;
+        return "entity.Book with geanre" + geanre;
     }
 }
