@@ -51,6 +51,8 @@ public class CastClasses {
 
         cat1.walk();
 
+        System.out.println(cat1.getClass());
+
         Cat cat1Cat = (Cat) cat1;
         cat1Cat.meow();
 
