@@ -43,6 +43,20 @@ public class PowerTwo {
             return false;
         }
         return (number & (number - 1)) == 0;
+        /*
+        4 -> 100
+        3 -> 011
+
+        8 -> 1000
+        7 -> 0111
+
+
+        5 -> 101
+        4 -> 100
+        --------
+             100 - не равно 0!!
+
+         */
     }
 
 
