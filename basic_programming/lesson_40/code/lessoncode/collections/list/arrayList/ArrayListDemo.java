@@ -26,8 +26,16 @@ public class ArrayListDemo {
         strings.trimToSize();
         //strings2.trimToSize();
 
+        System.out.println(strings.get(7));
+        strings.remove(7);
 
+        System.out.println(strings);
 
+        System.out.println(strings.size());
+
+        strings.set(7,"111");
+
+        System.out.println(strings);
 
 
 
