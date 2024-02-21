@@ -56,7 +56,7 @@ public class FuncInterface {
 
 
 
-        Collections.sort(strings,comp);
+        Collections.sort(strings,comp2);
 
 
         System.out.println(strings);
