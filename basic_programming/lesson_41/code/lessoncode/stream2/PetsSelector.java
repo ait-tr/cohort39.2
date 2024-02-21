@@ -99,6 +99,12 @@ public class PetsSelector {
 
         names.forEach(System.out::println);
 
+        System.out.println(owners.get(3).getPets());
+        owners.get(3).getPets().set(0,null);
+        System.out.println(owners.get(3).getPets());
+
+        owners.get(3).getPets().clear();
+        System.out.println(owners.get(3).getPets());
 
     }
 

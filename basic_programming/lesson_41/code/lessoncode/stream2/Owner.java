@@ -14,4 +14,12 @@ public class Owner {
     public List<Animal> getPets() {
         return pets;
     }
+
+    @Override
+    public String toString() {
+        return "Owner{" +
+                "name='" + name + '\'' +
+                ", pets=" + pets +
+                '}';
+    }
 }
