@@ -20,6 +20,7 @@ public class ArrayListRepository implements ToDoRepository{
         } else {
             ToDoEntity newToDo = new ToDoEntity(idSequence, entity.getName(), entity.getDescription());
             database.add(newToDo);
+            idSequence++;
             return newToDo;
         }
     }
