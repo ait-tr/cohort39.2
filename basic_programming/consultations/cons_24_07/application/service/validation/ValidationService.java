@@ -1,7 +1,7 @@
 package application.service.validation;
 
-import appV2.service.validation.ValidationException;
 import application.core.dto.AddToDoRequest;
+import application.service.exception.ValidationException;
 
 import java.util.ArrayList;
 import java.util.List;

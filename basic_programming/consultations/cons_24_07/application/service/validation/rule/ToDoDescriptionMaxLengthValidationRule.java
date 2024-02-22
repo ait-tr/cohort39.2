@@ -1,7 +1,8 @@
 package application.service.validation.rule;
 
-import appV2.service.validation.ValidationException;
+
 import application.core.dto.AddToDoRequest;
+import application.service.exception.ValidationException;
 import application.service.validation.ValidationRule;
 
 public class ToDoDescriptionMaxLengthValidationRule implements ValidationRule {

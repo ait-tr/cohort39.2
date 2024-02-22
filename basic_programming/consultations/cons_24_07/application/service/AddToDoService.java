@@ -2,7 +2,6 @@ package application.service;
 
 import application.core.dto.AddToDoRequest;
 import application.core.dto.AddToDoResponse;
-import application.core.entity.ToDoEntity;
 import application.repository.ToDoRepository;
 import application.service.util.Converter;
 import application.service.validation.ValidationService;

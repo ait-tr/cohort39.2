@@ -1,8 +1,7 @@
 package application.service.validation.rule;
 
-import appV2.service.validation.ValidationException;
+import application.service.exception.ValidationException;
 import application.core.dto.AddToDoRequest;
-import application.service.validation.CoreError;
 import application.service.validation.ValidationRule;
 
 import java.util.List;
