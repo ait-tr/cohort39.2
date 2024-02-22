@@ -7,7 +7,7 @@ import application.service.validation.ValidationRule;
 public class ToDoDescriptionMaxLengthValidationRule implements ValidationRule {
     @Override
     public void validate(AddToDoRequest request) {
-        if (request.getName().length() < 30) {
+        if (request.getName().length() > 30) {
            throw new ValidationException("ToDo description length must be less that 30 but actual name length is " + request.getName().length());
         }
     }
