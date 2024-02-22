@@ -11,14 +11,12 @@ import java.util.Scanner;
 public class AddToDoUiAction implements UIAction {
 
     private final AddToDoService service;
-    private final ValidationService validationService;
 
     UserInput userInput = new UserInput();
 
 
-    public AddToDoUiAction(AddToDoService service, ValidationService validationService) {
+    public AddToDoUiAction(AddToDoService service) {
         this.service = service;
-        this.validationService = validationService;
     }
 
     @Override
