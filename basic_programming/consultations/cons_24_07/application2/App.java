@@ -1,5 +1,6 @@
 package application2;
 
+import application.service.validation.rule.ToDoDescriptionNullValidationRule;
 import application2.repository.ArrayListRepository;
 import application2.repository.ToDoRepository;
 import application2.service.AddToDoService;
@@ -23,10 +24,10 @@ public class App {
         // запишем их в коллекцию для передачи в сервис
 
         ArrayList<ValidationRule> validationRules = new ArrayList<>();
-        validationRules.add(new ToDoNameNullValidationRule());
+        validationRules.add(new ToDoNameNotNullValidationRule());
         validationRules.add(new ToDoNameMinLengthValidationRule());
         validationRules.add(new ToDoNameMaxLengthValidationRule());
-        validationRules.add(new ToDoDescriptionNullValidationRule());
+        validationRules.add(new ToDoDescriptionNotNullValidationRule());
         validationRules.add(new ToDoDescriptionMaxLengthValidationRule());
 
         // создаем ValidationService куда передаем список правил
