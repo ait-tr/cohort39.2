@@ -12,4 +12,12 @@ public class FindAllToDoResponse {
         this.dtos = dtos;
         this.errors = errors;
     }
+
+    @Override
+    public String toString() {
+        return "FindAllToDoResponse{" +
+                "dtos=" + dtos +
+                ", errors=" + errors +
+                '}';
+    }
 }

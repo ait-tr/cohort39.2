@@ -8,7 +8,7 @@ public class ExitUiAction implements UIAction{
     @Override
     public void execute() {
         System.out.println("Bye-bye!");
-        return;
+        System.exit(0);
     }
 
     @Override
