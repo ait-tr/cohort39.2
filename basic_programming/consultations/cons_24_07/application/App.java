@@ -18,7 +18,6 @@ public class App {
         // создаем наш репозиторий
         ToDoRepository repository = new ArrayListRepository();
 
-
         // создаем правила валидации
         // запишем их в коллекцию для передачи в сервис
 
@@ -33,10 +32,8 @@ public class App {
 
         ValidationService validationService = new ValidationService(validationRules);
 
-
         AddToDoService addToDoService = new AddToDoService(repository, validationService);
         FindToDoService findToDoService = new FindToDoService(repository);
-
 
         AddToDoUiAction addToDoUiAction = new AddToDoUiAction(addToDoService);
         FindToDoUiAction findToDoUiAction = new FindToDoUiAction(findToDoService);
