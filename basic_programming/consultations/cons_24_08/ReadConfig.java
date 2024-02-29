@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class ReadConfig {
     public static void main(String[] args) {
-        String configFileName = "config.txt";
+        String configFileName = "basic_programming/consultations/cons_24_08/config.txt";
         Map<String,String> fileMapping = new HashMap<>();
         int numberOfCourses = 0;
 
@@ -26,6 +26,7 @@ public class ReadConfig {
                 }
                 if (readLine.startsWith("Datafiles")){
                     dataFilesSection = true;
+                    continue;
                 }
                 if (dataFilesSection) {
                     String[] parts = readLine.split(":");
@@ -52,7 +53,7 @@ public class ReadConfig {
         }
         
         for (Course course : courses){
-            System.out.println("Курс: ");
+            System.out.println("Курс: " + course.name);
             for (Question question : course.questions){
                 System.out.println("Вопрос: " + question.question);
                 System.out.println("Список ответ: " + question.answers);
