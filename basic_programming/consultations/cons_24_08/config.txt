@@ -1,0 +1,6 @@
+Constants:
+Number of courses : 2
+
+Datafiles:
+file1 : course1.data
+file2 : course2.data
