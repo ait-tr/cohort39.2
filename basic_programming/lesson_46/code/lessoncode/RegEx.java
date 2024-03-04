@@ -17,13 +17,6 @@ public class RegEx {
                 System.out.println(email + " : " + matcher.matches());
             }
 
-
-
-        }
-
-        private static boolean checkIP(String userInputIP){
-            return userInputIP.matches("((0|1\\d{0,2}|2([0-4][0-9]|5[0-5]))\\.)" +
-                    "{3}(0|1\\d{0,2}|2([0-4][0-9]|5[0-5]))");
         }
 
 }
