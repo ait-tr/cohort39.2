@@ -1,0 +1,38 @@
+/* 3 способ задния css стилей - это пиасть css св-ва в отлдельном css файле */
+/* color - меняет цвет шрифта */
+/* font-size - меняет размер шрифта
+font-wight - меняет жирность шрифта */
+/* height - изменяет размер тега. Может быть указан например в px или % */
+/* background-color - изменяет цвет бэкграунда */
+
+/* h5 - это селектор по тегу, в данном примере все теги h5 будут иметь цвет шрифта blueviolet */
+h5 {
+  color: blueviolet;
+}
+
+/* .actor-description - это селектор по классу, все теги имеющие этот класс будут иметь нижеперечисленные свойства */
+.actor-description-bratpitt {
+  color: red;
+}
+
+.actor-description {
+  color: darkgoldenrod;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* #description-johnydepp - это селектор по id, все теги имеющие этот id будут иметь нижеперечисленные свойства */
+#description-johnydepp {
+  color: lawngreen;
+}
+
+#root {
+  height: 100%;
+  background-color: antiquewhite;
+}
+
+html,
+body {
+  /* - делает высоту на 100% от родителя */
+  height: 100%;
+}

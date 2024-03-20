@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+  <head lang="en">
+    <title>Lesson 2</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+    <!-- 2 способ писать css код - это писать css св-ва в теге <style></style> -->
+    <style>
+      h3 {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <header>
+        <div>Users app</div>
+        <nav>
+          <a href="https://www.google.com/" target="_blank">Google</a>
+          <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+        </nav>
+      </header>
+      <main>
+        <!-- 1 способ задания цвета - это inline т.е через атрибут style -->
+        <div style="color: rgb(13, 13, 234)">Users:</div>
+        <p>Information about actors</p>
+        <div>
+          <h3>Brad Pitt</h3>
+          <h5>Age: 50</h5>
+          <p class="actor-description-bratpitt actor-description">
+            William Bradley Pitt (born December 18, 1963) is an American actor
+            and film producer.
+          </p>
+        </div>
+        <div>
+          <h3>Johny Depp</h3>
+          <h5>Age: 52</h5>
+          <p id="description-johnydepp" class="actor-description">
+            John Christopher Depp II (born June 9, 1963) is an American actor
+            and musician
+          </p>
+        </div>
+        <div>
+          <h3>George Clooney</h3>
+          <h5>Age: 60</h5>
+          <p class="actor-description">
+            George Timothy Clooney[2] (born May 6, 1961) is an American actor
+            and filmmaker.
+          </p>
+        </div>
+      </main>
+      <footer>
+        <div>Users app</div>
+        <p>This website about our users</p>
+      </footer>
+      <!-- Пример как работает блочные и строчные элементы
+    <h1>Lesson 2</h1>
+    <h3>HTML, CSS, selectors</h3>
+    <p>Ссылки на извстные <span>веб-приложения:</span></p>
+    <div><a href="https://www.google.com/" target="_blank">Google</a></div>
+    <a href="https://www.facebook.com/" target="_blank">Facebook</a> -->
+    </div>
+  </body>
+</html>
