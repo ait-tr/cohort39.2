@@ -1,0 +1,83 @@
+/* width - изменят ширину элемента, height - изменяет высоту элемента
+ - fit-content - по контенту
+ - min-content - Внутренняя минимальная ширина
+ - max-content - Внутренняя максимальная предпочтительная ширина
+ - % - ширина подстраивается под внешний контейнер
+ - px - от колличества пикселей зависит ширина элемента */
+
+/* border - cвойство, которое задает границы для элемента и имеет 3 значения:
+ 1- ширина границы
+ 2- стиль границы. Например: сплошная линия или пунктир
+ 3- цвет */
+
+/* padding - св-во, котрое добавляет внутренний отступ в html элементе. Такие же св-ва и в margin,
+   только вместо слова padding, пишем слово margin
+ Варианты использования:
+ - padding: 20px - добавляет отствупы со всех сторон
+ - padding: 20px 15px - 1 значение - сверху и снизу, 2 значение - слева и справа
+ - padding:20px 15px 20px 15px - добавляет отступы по отдельности по часовой стрелке, начиная сверху(1 значение)
+ - следующие свойства позволяют задавать padding  по отдельности для каждой из сторон
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  padding-left: 15px; */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+  background-color: antiquewhite;
+  padding: 10px;
+}
+
+.box-model {
+  font-size: 30px;
+  font-weight: bold;
+  color: blueviolet;
+  /* width: fit-content; */
+  width: 200px;
+  border: 5px solid black;
+  padding: 20px;
+  /* padding: 15px 20px; */
+  /* padding: 10px 20px 5px 15px; */
+  /* padding-top: 20px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  padding-left: 15px; */
+  margin: 20px;
+}
+
+/* * - позваляет передать св-ва указанные внутри фигурных скобок всем элементам в HTML документе */
+* {
+  box-sizing: border-box;
+}
+
+.animals {
+  min-width: 300px;
+  max-width: fit-content;
+  min-height: 200px;
+  max-height: fit-content;
+  padding: 15px 20px;
+  border: 1px dotted red;
+  margin: 40px;
+  background-color: white;
+}
+
+/* .image_control- класс для div, с помощью его мы контролируем картинку внутри.  */
+/* img подстраивается под width и height,котрые мы прописываем в этом классе  */
+.image_control {
+  width: 200px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+/* .tiger_img - класс для тега img. Свойства width: 100%; и height: 100%; позволяют картинке подстроится под
+внешний контейнер div с классом .image_control */
+.tiger_img {
+  width: 100%;
+  height: 100%;
+}

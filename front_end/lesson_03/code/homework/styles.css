@@ -1,0 +1,56 @@
+h3 {
+  color: black;
+}
+
+h1 {
+  color: black;
+}
+
+.info {
+  color: lightseagreen;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.essen {
+  color:midnightblue;
+  font-size: 18px;
+  font-weight: inherit;
+}
+
+.hobby {
+  color: cornflowerblue;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.film {
+  color: darkgreen;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.ende {
+  color: dimgray;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.scrap {
+  color: red;
+}
+
+.kochen {
+  color: aqua;
+}
+
+#root {
+  height: 100%;
+  background-color: lightgrey;
+}
+
+html,
+body {
+  /* height: 100%; */
+  min-height: 100%;
+}
