@@ -1,0 +1,71 @@
+/* barder-radius - закругляет границы у элемента - можно указывать в px и в % */
+/* box-shadow: 3px 3px 10px green;
+1 значение- сдвигает вправо, если число положительное, влево - если отрицательное
+2 значение - сдвигает вниз, если положительное, вверх - если отрицательное
+3 значение - размытие
+4 значение - цвет */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+  background-color: aliceblue;
+  padding: 20px;
+}
+
+.autos {
+  width: 400px;
+  height: 500px;
+  border: 2px solid black;
+  padding: 20px;
+  margin: 30px;
+  background-color: rgb(143, 118, 172);
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px green;
+}
+
+#mersedes {
+  border: 2px dotted rgb(223, 24, 24);
+}
+
+#audi {
+  border: 2px double rgb(79, 19, 192);
+}
+
+.image_control {
+  width: 350px;
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+.autos_img {
+  width: 100%;
+  height: 100%;
+}
+
+.cart-title {
+  margin-bottom: 20px;
+}
+
+.cart-description {
+  margin-bottom: 15px;
+}
