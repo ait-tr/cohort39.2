@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+  <head lang="en">
+    <title>Lesson 5: Forms</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+  </head>
+  <body>
+    <div id="root">
+      <form class="user-form">
+        <p class="user-form-title">User form</p>
+        <div class="input-container">
+          <!-- Каждому label нужно давать атрибут for, который будет связывать label с элементом формы по его id -->
+          <label for="first-name">First name</label>
+          <!-- name - атрибут, который задает уникальное имя для элемента формы, и с помощью JavaScript,
+          по этому name мы будем забирать значение из элемента формы, которое введет потенциальный пользователь -->
+          <!-- value - значение по умолчанию -->
+          <input
+            class="user-form-input"
+            id="first-name"
+            placeholder="Enter first name"
+            name="firstName"
+          />
+        </div>
+        <div class="input-container">
+          <label for="last-name">Last name</label>
+          <input
+            class="user-form-input"
+            id="last-name"
+            placeholder="Enter last name"
+            name="lastName"
+          />
+        </div>
+        <div class="input-container">
+          <label for="email-input">Email</label>
+          <input
+            type="email"
+            class="user-form-input"
+            id="email-input"
+            placeholder="Enter your email"
+            name="email"
+          />
+        </div>
+        <div class="input-container">
+          <label for="password-input">Password</label>
+          <input
+            type="password"
+            class="user-form-input"
+            id="password-input"
+            placeholder="Enter your password"
+            name="password"
+            required
+            minlength="3"
+          />
+        </div>
+        <div class="input-container">
+          <label for="job-select">Choose your job</label>
+          <select name="job" id="job-select" class="user-form-input">
+            <option value="QA">QA</option>
+            <option value="Frontend developer">Frontend developer</option>
+            <option value="Backend eveloper">Backend eveloper</option>
+            <option value="Mobile Developer">Mobile Developer</option>
+            <option value="UI/UX desighner">UI/UX desighner</option>
+          </select>
+        </div>
+        <div class="input-container">
+          <label for="about-textarea">About:</label>
+          <textarea
+            class="textarea"
+            id="about-textarea"
+            placeholder="Tell us about yourself"
+            name="about"
+          ></textarea>
+        </div>
+        <div class="checkbox-container">
+          <input type="checkbox" id="agree-checkbox" name="agree" />
+          <label for="agree-checkbox">I agree with privacy policy</label>
+        </div>
+        <!-- Добавление кнопки -->
+        <!-- type:
+        - button - значение по умолчанию, не делает ничего, пока вы не добавите ей функцию через JS
+        -  reset - чистит введенные данные в форме
+        - submit - собирает данные с формы и позволяет с ними что-то сделать(создать карточку, отправить на сервер и т.д) -->
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </body>
+</html>
