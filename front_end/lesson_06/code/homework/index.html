@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+  <head lang="en">
+    <title>Home work 5</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+  </head>
+  <body>
+    <div id="root">
+      <form class="contact_form">
+        <p class="contact_form_titel">Contact us</p>
+        <div class="input_container">
+          <label for="user_name">Name</label>
+          <input
+            class="user_form_imput"
+            id="user_name"
+            placeholder="Enter your name"
+            name="userName"
+            type="text"
+            required
+          />
+        </div>
+        <div class="input_container">
+          <label for="email_input">Email</label>
+          <input
+            type="email"
+            class="user_form_imput"
+            id="email_input"
+            placeholder="Enter your email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="input_container">
+          <label for="location_select">Location</label>
+          <select name="location" id="location_select" class="user_form_imput">
+            <option value="New York">New York</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Boston">Boston</option>
+          </select>
+        </div>
+        <div class="input_container">
+          <label for="messege-textarea">Messege</label>
+          <textarea
+            class="textarea"
+            id="messege-textarea"
+            placeholder="Enter your message"
+            name="messege"
+            required
+          ></textarea>
+        </div>
+        <div class="checbox-container">
+          <input type="checkbox" id="agree_checkbox" name="agree" required />
+          <label for="agree_checkbox">I agree</label>
+        </div>
+        <button id="button_user" type="submit">SEND REQUEST</button>
+        <button id="button_user" type="reset">CLEAR FORM</button>
+      </form>
+    </div>
+  </body>
+</html>
