@@ -4,8 +4,8 @@
   "homework": "homework.md",
   "code": [
     "./code/homework/index.js",
-    "./code/homework/index.html",
-    "./code/lesson/index.js"
+    "./code/lesson/string.js",
+    "./code/lesson/functions.js"
   ],
   "video": "",
   "etc": ""
