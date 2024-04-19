@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  background-image: url("https://i.pinimg.com/originals/c9/4a/ff/c94affe6bcb9fbf7d3508ba98977a1d1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 900px;
+  min-height: 200px;
+  max-height: fit-content;
+  padding: 30px;
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.ingredients-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  min-height: 200px;
+  max-height: 400px;
+  padding: 30px;
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.ingredients-control {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.remove-ingredients {
+  display: none;
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(210, 48, 48);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-ingredient {
+  width: 240px;
+  height: 50px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(67, 67, 245);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
