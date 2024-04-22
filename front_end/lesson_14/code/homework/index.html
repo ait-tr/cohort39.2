@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+  <head lang="en">
+    <title>Homework 13: DOM and Forms</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <div id="root">
+      <h1>Форма рассчёта идеального веса</h1>
+      <form class="weight-form">
+        <div class="form-element">
+          <label for="height-input">Рост, см*</label>
+          <input
+            class="input-element"
+            name="height"
+            id="height-input"
+            type="number"
+            placeholder="Введите свой рост"
+            required
+          />
+        </div>
+        <div class="form-element">
+          <label for="gender-select">Выберете пол*</label>
+          <select required class="select-element" name="gender" id="gender-select">
+            <option value="male">Мужской</option>
+            <option value="female">Женский</option>
+          </select>
+        </div>
+        <button type="submit" class="result-button">Рассчитать</button>
+        <div class="result"></div>
+        <!-- <a id="google-link" href="https://www.google.com/">Google</a> -->
+      </form>
+    </div>
+  </body>
+</html>
