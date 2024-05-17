@@ -1,0 +1,12 @@
+{
+  "plan": "plan.md",
+  "theory": "theory.md",
+  "homework": "homework.md",
+  "code": [
+    "./code/homework_and_lesson/index.html",
+    "./code/homework_and_lesson/index.js",
+    "./code/homework_and_lesson/styles.css"
+  ],
+  "video": "",
+  "etc": ""
+}
