@@ -1,3 +1,5 @@
+## Диаграммы с занятия - [ссылка](https://drawsql.app/teams/gleb-team-1/diagrams/vet-clinic)
+
 ```sql
 -- Создаем БД
 CREATE DATABASE lesson_02;
